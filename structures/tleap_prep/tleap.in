@@ -1,0 +1,5 @@
+source leaprc.constph
+prot = loadPDB R206H.fixed.vac.pdb
+
+saveAmberParm prot R206H_titratable.parm7 R206H_titratable.rst7
+quit

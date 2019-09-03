@@ -1,0 +1,4505 @@
+log started: Tue Sep  3 16:16:22 2019
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the ff10 force field
+>>> # ----- NOTE: this is designed for PDB format 3!
+>>> #       ff10 =  ff99SB for proteins; ff99bsc0 for DNA; ff99sbsc_chiOL3 for RNA
+>>> #       phosphoaa parms from N. Homeyer, A.H.C. Horn, H. Lanig, H. Sticht
+>>> #           J. Mol. Model. 2006, 12, 281-289.  OP vdW parameters modified
+>>> #           by T. Steinbrecher and J. Latzer.
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "H"   "H" "sp3" }
+>>> 	{ "HO"  "H" "sp3" }
+>>> 	{ "HS"  "H" "sp3" }
+>>> 	{ "H1"  "H" "sp3" }
+>>> 	{ "H2"  "H" "sp3" }
+>>> 	{ "H3"  "H" "sp3" }
+>>> 	{ "H4"  "H" "sp3" }
+>>> 	{ "H5"  "H" "sp3" }
+>>> 	{ "HW"  "H" "sp3" }
+>>> 	{ "HC"  "H" "sp3" }
+>>> 	{ "HA"  "H" "sp3" }
+>>> 	{ "HP"  "H" "sp3" }
+>>> 	{ "HZ"  "H" "sp3" }
+>>> 	{ "OH"  "O" "sp3" }
+>>> 	{ "OS"  "O" "sp3" }
+>>> 	{ "O"   "O" "sp2" }
+>>> 	{ "O2"  "O" "sp2" }
+>>> 	{ "OP"  "O" "sp2" }
+>>> 	{ "OW"  "O" "sp3" }
+>>> 	{ "CT"  "C" "sp3" }
+>>> 	{ "CX"  "C" "sp3" }
+>>> 	{ "CH"  "C" "sp3" }
+>>> 	{ "CS"  "C" "sp2" }
+>>> 	{ "C"   "C" "sp2" }
+>>> 	{ "C*"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CB"  "C" "sp2" }
+>>> 	{ "CC"  "C" "sp2" }
+>>> 	{ "CN"  "C" "sp2" }
+>>> 	{ "CM"  "C" "sp2" }
+>>> 	{ "CK"  "C" "sp2" }
+>>> 	{ "CQ"  "C" "sp2" }
+>>> 	{ "CD"  "C" "sp2" }
+>>> 	{ "C5"  "C" "sp2" }
+>>> 	{ "C4"  "C" "sp2" }
+>>> 	{ "CP"  "C" "sp2" }
+>>> 	{ "CI"  "C" "sp3" }
+>>> 	{ "CJ"  "C" "sp2" }
+>>> 	{ "CW"  "C" "sp2" }
+>>> 	{ "CV"  "C" "sp2" }
+>>> 	{ "CR"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CY"  "C" "sp2" }
+>>> 	{ "C0"  "Ca" "sp2" }
+>>> 	{ "MG"  "Mg" "sp3" }
+>>> 	{ "N"   "N" "sp2" }
+>>> 	{ "NA"  "N" "sp2" }
+>>> 	{ "N2"  "N" "sp2" }
+>>> 	{ "N*"  "N" "sp2" }
+>>> 	{ "NP"  "N" "sp2" }
+>>> 	{ "NQ"  "N" "sp2" }
+>>> 	{ "NB"  "N" "sp2" }
+>>> 	{ "NC"  "N" "sp2" }
+>>> 	{ "NT"  "N" "sp3" }
+>>> 	{ "NY"  "N" "sp2" }
+>>> 	{ "N3"  "N" "sp3" }
+>>> 	{ "S"   "S" "sp3" }
+>>> 	{ "SH"  "S" "sp3" }
+>>> 	{ "P"   "P" "sp3" }
+>>> 	{ "LP"  ""  "sp3" }
+>>> 	{ "EP"  ""  "sp3" }
+>>> 	{ "F"   "F" "sp3" }
+>>> 	{ "Cl"  "Cl" "sp3" }
+>>> 	{ "Br"  "Br" "sp3" }
+>>> 	{ "I"   "I"  "sp3" }
+>>> 	{ "F-"   "F" "sp3" }
+>>> 	{ "Cl-"  "Cl" "sp3" }
+>>> 	{ "Br-"  "Br" "sp3" }
+>>> 	{ "I-"   "I"  "sp3" }
+>>> 	{ "Li+"  "Li"  "sp3" }
+>>> 	{ "Na+"  "Na"  "sp3" }
+>>> 	{ "K+"  "K"  "sp3" }
+>>> 	{ "Rb+"  "Rb"  "sp3" }
+>>> 	{ "Cs+"  "Cs"  "sp3" }
+>>> 	{ "Mg+"  "Mg"  "sp3" }
+>>> # glycam
+>>> 	{ "OG"  "O" "sp3" }
+>>> 	{ "OL"  "O" "sp3" }
+>>> 	{ "AC"  "C" "sp3" }
+>>> 	{ "EC"  "C" "sp3" }
+>>> }
+>>> #
+>>> #	Load the main parameter set.
+>>> #
+>>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>>> #
+>>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>>> #
+>>> loadOff amino10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/amino10.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>>> loadOff aminoct10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminoct10.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>>> loadOff aminont10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminont10.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>>> loadOff oldff/phosphoaa10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/oldff/phosphoaa10.lib
+Loading: H2D
+Loading: PTR
+Loading: S1P
+Loading: SEP
+Loading: T1P
+Loading: TPO
+Loading: Y1P
+>>> loadOff nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/nucleic10.lib
+Loading: A
+Loading: A3
+Loading: A5
+Loading: AN
+Loading: C
+Loading: C3
+Loading: C5
+Loading: CN
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: G
+Loading: G3
+Loading: G5
+Loading: GN
+Loading: OHE
+Loading: U
+Loading: U3
+Loading: U5
+Loading: UN
+>>> #
+>>> #       Load water and ions
+>>> # 
+>>> loadOff atomic_ions.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>>> loadOff solvents.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>>> HOH = TP3
+>>> WAT = TP3
+>>> 
+>>> #
+>>> #	Define the PDB name map for the amino acids and nucleic acids
+>>> #
+>>> addPdbResMap {
+>>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>>>   { 0 "G" "G5"  } { 1 "G" "G3"  } 
+>>>   { 0 "A" "A5"  } { 1 "A" "A3"  } 
+>>>   { 0 "C" "C5"  } { 1 "C" "C3"  } 
+>>>   { 0 "U" "U5"  } { 1 "U" "U3"  } 
+>>>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>>>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>>>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>>>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }  
+>>> #  some old Amber residue names for RNA:
+>>>   { 0  "RA5" "A5" } { 1 "RA3" "A3"} {"RA" "A" }
+>>>   { 0  "RC5" "C5" } { 1 "RC3" "C3"} {"RC" "C" }
+>>>   { 0  "RG5" "G5" } { 1 "RG3" "G3"} {"RG" "G" }
+>>>   { 0  "RU5" "U5" } { 1 "RU3" "U3"} {"RU" "U" }
+>>> #  some really old Amber residue names, assuming DNA:
+>>>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>>>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>>>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>>>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>>> #  uncomment out the following if you have this old style RNA files:
+>>> # { 0 "GUA" "G5"  } { 1 "GUA" "G3"  } { "GUA" "G" }
+>>> # { 0 "ADE" "A5"  } { 1 "ADE" "A3"  } { "ADE" "A" }
+>>> # { 0 "CYT" "C5"  } { 1 "CYT" "C3"  } { "CYT" "C" }
+>>> # { 0 "THY" "T5"  } { 1 "THY" "T3"  } { "THY" "T" }
+>>> 
+>>> }
+>>> 
+>>> #  try to be good about reading in really old atom names as well:
+>>> addPdbAtomMap {
+>>>   { "O5*" "O5'" }
+>>>   { "C5*" "C5'" }
+>>>   { "C4*" "C4'" }
+>>>   { "O4*" "O4'" }
+>>>   { "C3*" "C3'" }
+>>>   { "O3*" "O3'" }
+>>>   { "C2*" "C2'" }
+>>>   { "O2*" "O2'" }
+>>>   { "C1*" "C1'" }
+>>>   { "C5M" "C7"  }
+>>>   { "H1*" "H1'" }
+>>>   { "H2*1" "H2'" }
+>>>   { "H2*2" "H2''" }
+>>>   { "H2'1" "H2'" }
+>>>   { "H2'2" "H2''" }
+>>>   { "H3*" "H3'" }
+>>>   { "H4*" "H4'" }
+>>>   { "H5*1" "H5'" }
+>>>   { "H5*2" "H5''" }
+>>>   { "H5'1" "H5'" }
+>>>   { "H5'2" "H5''" }
+>>>   { "HO'2" "HO2'" }
+>>>   { "H5T"  "HO5'" }
+>>>   { "H3T"  "HO3'" }
+>>>   { "O1'" "O4'" }
+>>>   { "OA"  "OP1" }
+>>>   { "OB"  "OP2" }
+>>>   { "O1P" "OP1" }
+>>>   { "O2P" "OP2" }
+>>> }
+>>> 
+>>> #
+>>> # assume that most often proteins use HIE
+>>> #
+>>> NHIS = NHIE
+>>> HIS = HIE
+>>> CHIS = CHIE
+>> 
+>> 
+>> # Extra constant pH libraries for Amino Acids
+>> loadOFF constph.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/constph.lib
+Loading: AS2
+Loading: AS4
+Loading: GL4
+>> 
+>> # Extra constant pH libraries for Nucleic Acids
+>> loadOFF all_prot_nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/all_prot_nucleic10.lib
+Loading: A3E
+Loading: A3P
+Loading: A5E
+Loading: A5P
+Loading: AE
+Loading: AP
+Loading: C3E
+Loading: C3P
+Loading: C5E
+Loading: C5P
+Loading: CE
+Loading: CP
+Loading: D3A
+Loading: D3AE
+Loading: D3C
+Loading: D3CE
+Loading: D3G
+Loading: D3GE
+Loading: D3T
+Loading: D3TE
+Loading: D5A
+Loading: D5AE
+Loading: D5C
+Loading: D5CE
+Loading: D5G
+Loading: D5GE
+Loading: D5T
+Loading: D5TE
+Loading: DAE
+Loading: DAP
+Loading: DCE
+Loading: DCP
+Loading: DGD
+Loading: DGE
+Loading: DTD
+Loading: DTE
+Loading: G3D
+Loading: G3E
+Loading: G5D
+Loading: G5E
+Loading: GD
+Loading: GE
+Loading: U3D
+Loading: U3E
+Loading: U5D
+Loading: U5E
+Loading: UD
+Loading: UE
+>> loadOFF cph_nucleic_caps.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/cph_nucleic_caps.lib
+Loading: CH3
+Loading: MOC
+>> 
+>> # Necessary constant pH force field modifications
+>> loadAmberParams frcmod.constph
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.constph
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifcations for titrations
+>> loadAmberParams frcmod.protonated_nucleic
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.protonated_nucleic
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifications for protonated nucleic acids
+(UNKNOWN ATOM TYPE: NX)
+(UNKNOWN ATOM TYPE: OX)
+(UNKNOWN ATOM TYPE: HD)
+>> 
+>> # PBRadii must be mbondi2, corresponding to the proper reference energies
+>> set default PBRadii mbondi2
+Using H(N)-modified Bondi radii
+> 
+> prot = load R206H_titratable.tleap_input_struc.pdb
+
+/cm/shared/apps/amber18/bin/teLeap: Fatal Error!
+Error from the parser: syntax error
+
+Exiting LEaP: Errors = 1; Warnings = 0; Notes = 0.
+log started: Tue Sep  3 16:17:08 2019
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the ff10 force field
+>>> # ----- NOTE: this is designed for PDB format 3!
+>>> #       ff10 =  ff99SB for proteins; ff99bsc0 for DNA; ff99sbsc_chiOL3 for RNA
+>>> #       phosphoaa parms from N. Homeyer, A.H.C. Horn, H. Lanig, H. Sticht
+>>> #           J. Mol. Model. 2006, 12, 281-289.  OP vdW parameters modified
+>>> #           by T. Steinbrecher and J. Latzer.
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "H"   "H" "sp3" }
+>>> 	{ "HO"  "H" "sp3" }
+>>> 	{ "HS"  "H" "sp3" }
+>>> 	{ "H1"  "H" "sp3" }
+>>> 	{ "H2"  "H" "sp3" }
+>>> 	{ "H3"  "H" "sp3" }
+>>> 	{ "H4"  "H" "sp3" }
+>>> 	{ "H5"  "H" "sp3" }
+>>> 	{ "HW"  "H" "sp3" }
+>>> 	{ "HC"  "H" "sp3" }
+>>> 	{ "HA"  "H" "sp3" }
+>>> 	{ "HP"  "H" "sp3" }
+>>> 	{ "HZ"  "H" "sp3" }
+>>> 	{ "OH"  "O" "sp3" }
+>>> 	{ "OS"  "O" "sp3" }
+>>> 	{ "O"   "O" "sp2" }
+>>> 	{ "O2"  "O" "sp2" }
+>>> 	{ "OP"  "O" "sp2" }
+>>> 	{ "OW"  "O" "sp3" }
+>>> 	{ "CT"  "C" "sp3" }
+>>> 	{ "CX"  "C" "sp3" }
+>>> 	{ "CH"  "C" "sp3" }
+>>> 	{ "CS"  "C" "sp2" }
+>>> 	{ "C"   "C" "sp2" }
+>>> 	{ "C*"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CB"  "C" "sp2" }
+>>> 	{ "CC"  "C" "sp2" }
+>>> 	{ "CN"  "C" "sp2" }
+>>> 	{ "CM"  "C" "sp2" }
+>>> 	{ "CK"  "C" "sp2" }
+>>> 	{ "CQ"  "C" "sp2" }
+>>> 	{ "CD"  "C" "sp2" }
+>>> 	{ "C5"  "C" "sp2" }
+>>> 	{ "C4"  "C" "sp2" }
+>>> 	{ "CP"  "C" "sp2" }
+>>> 	{ "CI"  "C" "sp3" }
+>>> 	{ "CJ"  "C" "sp2" }
+>>> 	{ "CW"  "C" "sp2" }
+>>> 	{ "CV"  "C" "sp2" }
+>>> 	{ "CR"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CY"  "C" "sp2" }
+>>> 	{ "C0"  "Ca" "sp2" }
+>>> 	{ "MG"  "Mg" "sp3" }
+>>> 	{ "N"   "N" "sp2" }
+>>> 	{ "NA"  "N" "sp2" }
+>>> 	{ "N2"  "N" "sp2" }
+>>> 	{ "N*"  "N" "sp2" }
+>>> 	{ "NP"  "N" "sp2" }
+>>> 	{ "NQ"  "N" "sp2" }
+>>> 	{ "NB"  "N" "sp2" }
+>>> 	{ "NC"  "N" "sp2" }
+>>> 	{ "NT"  "N" "sp3" }
+>>> 	{ "NY"  "N" "sp2" }
+>>> 	{ "N3"  "N" "sp3" }
+>>> 	{ "S"   "S" "sp3" }
+>>> 	{ "SH"  "S" "sp3" }
+>>> 	{ "P"   "P" "sp3" }
+>>> 	{ "LP"  ""  "sp3" }
+>>> 	{ "EP"  ""  "sp3" }
+>>> 	{ "F"   "F" "sp3" }
+>>> 	{ "Cl"  "Cl" "sp3" }
+>>> 	{ "Br"  "Br" "sp3" }
+>>> 	{ "I"   "I"  "sp3" }
+>>> 	{ "F-"   "F" "sp3" }
+>>> 	{ "Cl-"  "Cl" "sp3" }
+>>> 	{ "Br-"  "Br" "sp3" }
+>>> 	{ "I-"   "I"  "sp3" }
+>>> 	{ "Li+"  "Li"  "sp3" }
+>>> 	{ "Na+"  "Na"  "sp3" }
+>>> 	{ "K+"  "K"  "sp3" }
+>>> 	{ "Rb+"  "Rb"  "sp3" }
+>>> 	{ "Cs+"  "Cs"  "sp3" }
+>>> 	{ "Mg+"  "Mg"  "sp3" }
+>>> # glycam
+>>> 	{ "OG"  "O" "sp3" }
+>>> 	{ "OL"  "O" "sp3" }
+>>> 	{ "AC"  "C" "sp3" }
+>>> 	{ "EC"  "C" "sp3" }
+>>> }
+>>> #
+>>> #	Load the main parameter set.
+>>> #
+>>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>>> #
+>>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>>> #
+>>> loadOff amino10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/amino10.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>>> loadOff aminoct10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminoct10.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>>> loadOff aminont10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminont10.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>>> loadOff oldff/phosphoaa10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/oldff/phosphoaa10.lib
+Loading: H2D
+Loading: PTR
+Loading: S1P
+Loading: SEP
+Loading: T1P
+Loading: TPO
+Loading: Y1P
+>>> loadOff nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/nucleic10.lib
+Loading: A
+Loading: A3
+Loading: A5
+Loading: AN
+Loading: C
+Loading: C3
+Loading: C5
+Loading: CN
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: G
+Loading: G3
+Loading: G5
+Loading: GN
+Loading: OHE
+Loading: U
+Loading: U3
+Loading: U5
+Loading: UN
+>>> #
+>>> #       Load water and ions
+>>> # 
+>>> loadOff atomic_ions.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>>> loadOff solvents.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>>> HOH = TP3
+>>> WAT = TP3
+>>> 
+>>> #
+>>> #	Define the PDB name map for the amino acids and nucleic acids
+>>> #
+>>> addPdbResMap {
+>>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>>>   { 0 "G" "G5"  } { 1 "G" "G3"  } 
+>>>   { 0 "A" "A5"  } { 1 "A" "A3"  } 
+>>>   { 0 "C" "C5"  } { 1 "C" "C3"  } 
+>>>   { 0 "U" "U5"  } { 1 "U" "U3"  } 
+>>>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>>>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>>>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>>>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }  
+>>> #  some old Amber residue names for RNA:
+>>>   { 0  "RA5" "A5" } { 1 "RA3" "A3"} {"RA" "A" }
+>>>   { 0  "RC5" "C5" } { 1 "RC3" "C3"} {"RC" "C" }
+>>>   { 0  "RG5" "G5" } { 1 "RG3" "G3"} {"RG" "G" }
+>>>   { 0  "RU5" "U5" } { 1 "RU3" "U3"} {"RU" "U" }
+>>> #  some really old Amber residue names, assuming DNA:
+>>>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>>>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>>>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>>>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>>> #  uncomment out the following if you have this old style RNA files:
+>>> # { 0 "GUA" "G5"  } { 1 "GUA" "G3"  } { "GUA" "G" }
+>>> # { 0 "ADE" "A5"  } { 1 "ADE" "A3"  } { "ADE" "A" }
+>>> # { 0 "CYT" "C5"  } { 1 "CYT" "C3"  } { "CYT" "C" }
+>>> # { 0 "THY" "T5"  } { 1 "THY" "T3"  } { "THY" "T" }
+>>> 
+>>> }
+>>> 
+>>> #  try to be good about reading in really old atom names as well:
+>>> addPdbAtomMap {
+>>>   { "O5*" "O5'" }
+>>>   { "C5*" "C5'" }
+>>>   { "C4*" "C4'" }
+>>>   { "O4*" "O4'" }
+>>>   { "C3*" "C3'" }
+>>>   { "O3*" "O3'" }
+>>>   { "C2*" "C2'" }
+>>>   { "O2*" "O2'" }
+>>>   { "C1*" "C1'" }
+>>>   { "C5M" "C7"  }
+>>>   { "H1*" "H1'" }
+>>>   { "H2*1" "H2'" }
+>>>   { "H2*2" "H2''" }
+>>>   { "H2'1" "H2'" }
+>>>   { "H2'2" "H2''" }
+>>>   { "H3*" "H3'" }
+>>>   { "H4*" "H4'" }
+>>>   { "H5*1" "H5'" }
+>>>   { "H5*2" "H5''" }
+>>>   { "H5'1" "H5'" }
+>>>   { "H5'2" "H5''" }
+>>>   { "HO'2" "HO2'" }
+>>>   { "H5T"  "HO5'" }
+>>>   { "H3T"  "HO3'" }
+>>>   { "O1'" "O4'" }
+>>>   { "OA"  "OP1" }
+>>>   { "OB"  "OP2" }
+>>>   { "O1P" "OP1" }
+>>>   { "O2P" "OP2" }
+>>> }
+>>> 
+>>> #
+>>> # assume that most often proteins use HIE
+>>> #
+>>> NHIS = NHIE
+>>> HIS = HIE
+>>> CHIS = CHIE
+>> 
+>> 
+>> # Extra constant pH libraries for Amino Acids
+>> loadOFF constph.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/constph.lib
+Loading: AS2
+Loading: AS4
+Loading: GL4
+>> 
+>> # Extra constant pH libraries for Nucleic Acids
+>> loadOFF all_prot_nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/all_prot_nucleic10.lib
+Loading: A3E
+Loading: A3P
+Loading: A5E
+Loading: A5P
+Loading: AE
+Loading: AP
+Loading: C3E
+Loading: C3P
+Loading: C5E
+Loading: C5P
+Loading: CE
+Loading: CP
+Loading: D3A
+Loading: D3AE
+Loading: D3C
+Loading: D3CE
+Loading: D3G
+Loading: D3GE
+Loading: D3T
+Loading: D3TE
+Loading: D5A
+Loading: D5AE
+Loading: D5C
+Loading: D5CE
+Loading: D5G
+Loading: D5GE
+Loading: D5T
+Loading: D5TE
+Loading: DAE
+Loading: DAP
+Loading: DCE
+Loading: DCP
+Loading: DGD
+Loading: DGE
+Loading: DTD
+Loading: DTE
+Loading: G3D
+Loading: G3E
+Loading: G5D
+Loading: G5E
+Loading: GD
+Loading: GE
+Loading: U3D
+Loading: U3E
+Loading: U5D
+Loading: U5E
+Loading: UD
+Loading: UE
+>> loadOFF cph_nucleic_caps.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/cph_nucleic_caps.lib
+Loading: CH3
+Loading: MOC
+>> 
+>> # Necessary constant pH force field modifications
+>> loadAmberParams frcmod.constph
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.constph
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifcations for titrations
+>> loadAmberParams frcmod.protonated_nucleic
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.protonated_nucleic
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifications for protonated nucleic acids
+(UNKNOWN ATOM TYPE: NX)
+(UNKNOWN ATOM TYPE: OX)
+(UNKNOWN ATOM TYPE: HD)
+>> 
+>> # PBRadii must be mbondi2, corresponding to the proper reference energies
+>> set default PBRadii mbondi2
+Using H(N)-modified Bondi radii
+> 
+> prot = loadPDB R206H_titratable.tleap_input_struc.pdb
+Loading PDB file: ./R206H_titratable.tleap_input_struc.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue THR, term: Terminal/beginning, seq. number: 0 to: NTHR.
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 14   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 16   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 34   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 41   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 44   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 47   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 63   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 71   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 80   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 87   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 102   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 112   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 113   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 114   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 120   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 122   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 133   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 146   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 148   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 157   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 162   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 166   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 168   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 173   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 174   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 178   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 179   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 189   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 207   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 209   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 223   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 227   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 228   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 255   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 256   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 260   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 274   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 277   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 300   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 303   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 305   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 307   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 320   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 321   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 325   type: Nonterminal
+Mapped residue GLY, term: Terminal/beginning, seq. number: 328 to: NGLY.
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 344   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: CY4   number: 349   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 352   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 353   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 361   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 362   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 371   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 374   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 379   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 400   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 407   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: TY4   number: 409   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 414   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: HS4   number: 421   type: Nonterminal
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+Unknown residue: LY4   number: 432   type: Nonterminal
+Creating new UNIT for residue: HS4 sequence: 15
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 15>
+Created a new atom named: CA within residue: .R<HS4 15>
+Created a new atom named: CB within residue: .R<HS4 15>
+Created a new atom named: ND1 within residue: .R<HS4 15>
+Created a new atom named: CG within residue: .R<HS4 15>
+Created a new atom named: CE1 within residue: .R<HS4 15>
+Created a new atom named: NE2 within residue: .R<HS4 15>
+Created a new atom named: CD2 within residue: .R<HS4 15>
+Created a new atom named: C within residue: .R<HS4 15>
+Created a new atom named: O within residue: .R<HS4 15>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: CY4 sequence: 17
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 17>
+Created a new atom named: CA within residue: .R<CY4 17>
+Created a new atom named: CB within residue: .R<CY4 17>
+Created a new atom named: SG within residue: .R<CY4 17>
+Created a new atom named: C within residue: .R<CY4 17>
+Created a new atom named: O within residue: .R<CY4 17>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: HS4 sequence: 35
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 35>
+Created a new atom named: CA within residue: .R<HS4 35>
+Created a new atom named: CB within residue: .R<HS4 35>
+Created a new atom named: ND1 within residue: .R<HS4 35>
+Created a new atom named: CG within residue: .R<HS4 35>
+Created a new atom named: CE1 within residue: .R<HS4 35>
+Created a new atom named: NE2 within residue: .R<HS4 35>
+Created a new atom named: CD2 within residue: .R<HS4 35>
+Created a new atom named: C within residue: .R<HS4 35>
+Created a new atom named: O within residue: .R<HS4 35>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 37>
+  Added missing heavy atom: .R<ILE 37>.A<CD1 14>
+Creating new UNIT for residue: CY4 sequence: 42
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 42>
+Created a new atom named: CA within residue: .R<CY4 42>
+Created a new atom named: CB within residue: .R<CY4 42>
+Created a new atom named: SG within residue: .R<CY4 42>
+Created a new atom named: C within residue: .R<CY4 42>
+Created a new atom named: O within residue: .R<CY4 42>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 45
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 45>
+Created a new atom named: CA within residue: .R<LY4 45>
+Created a new atom named: CB within residue: .R<LY4 45>
+Created a new atom named: CG within residue: .R<LY4 45>
+Created a new atom named: CD within residue: .R<LY4 45>
+Created a new atom named: CE within residue: .R<LY4 45>
+Created a new atom named: NZ within residue: .R<LY4 45>
+Created a new atom named: C within residue: .R<LY4 45>
+Created a new atom named: O within residue: .R<LY4 45>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 48
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 48>
+Created a new atom named: CA within residue: .R<TY4 48>
+Created a new atom named: CB within residue: .R<TY4 48>
+Created a new atom named: CG within residue: .R<TY4 48>
+Created a new atom named: CD1 within residue: .R<TY4 48>
+Created a new atom named: CE1 within residue: .R<TY4 48>
+Created a new atom named: CZ within residue: .R<TY4 48>
+Created a new atom named: OH within residue: .R<TY4 48>
+Created a new atom named: CD2 within residue: .R<TY4 48>
+Created a new atom named: CE2 within residue: .R<TY4 48>
+Created a new atom named: C within residue: .R<TY4 48>
+Created a new atom named: O within residue: .R<TY4 48>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 64
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 64>
+Created a new atom named: CA within residue: .R<LY4 64>
+Created a new atom named: CB within residue: .R<LY4 64>
+Created a new atom named: CG within residue: .R<LY4 64>
+Created a new atom named: CD within residue: .R<LY4 64>
+Created a new atom named: CE within residue: .R<LY4 64>
+Created a new atom named: NZ within residue: .R<LY4 64>
+Created a new atom named: C within residue: .R<LY4 64>
+Created a new atom named: O within residue: .R<LY4 64>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 65>
+  Added missing heavy atom: .R<ILE 65>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 72
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 72>
+Created a new atom named: CA within residue: .R<LY4 72>
+Created a new atom named: CB within residue: .R<LY4 72>
+Created a new atom named: CG within residue: .R<LY4 72>
+Created a new atom named: CD within residue: .R<LY4 72>
+Created a new atom named: CE within residue: .R<LY4 72>
+Created a new atom named: NZ within residue: .R<LY4 72>
+Created a new atom named: C within residue: .R<LY4 72>
+Created a new atom named: O within residue: .R<LY4 72>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 81
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 81>
+Created a new atom named: CA within residue: .R<TY4 81>
+Created a new atom named: CB within residue: .R<TY4 81>
+Created a new atom named: CG within residue: .R<TY4 81>
+Created a new atom named: CD1 within residue: .R<TY4 81>
+Created a new atom named: CE1 within residue: .R<TY4 81>
+Created a new atom named: CZ within residue: .R<TY4 81>
+Created a new atom named: OH within residue: .R<TY4 81>
+Created a new atom named: CD2 within residue: .R<TY4 81>
+Created a new atom named: CE2 within residue: .R<TY4 81>
+Created a new atom named: C within residue: .R<TY4 81>
+Created a new atom named: O within residue: .R<TY4 81>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: HS4 sequence: 88
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 88>
+Created a new atom named: CA within residue: .R<HS4 88>
+Created a new atom named: CB within residue: .R<HS4 88>
+Created a new atom named: ND1 within residue: .R<HS4 88>
+Created a new atom named: CG within residue: .R<HS4 88>
+Created a new atom named: CE1 within residue: .R<HS4 88>
+Created a new atom named: NE2 within residue: .R<HS4 88>
+Created a new atom named: CD2 within residue: .R<HS4 88>
+Created a new atom named: C within residue: .R<HS4 88>
+Created a new atom named: O within residue: .R<HS4 88>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 91>
+  Added missing heavy atom: .R<ILE 91>.A<CD1 14>
+Created a new atom named: CD within residue: .R<ILE 95>
+  Added missing heavy atom: .R<ILE 95>.A<CD1 14>
+Creating new UNIT for residue: HS4 sequence: 103
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 103>
+Created a new atom named: CA within residue: .R<HS4 103>
+Created a new atom named: CB within residue: .R<HS4 103>
+Created a new atom named: ND1 within residue: .R<HS4 103>
+Created a new atom named: CG within residue: .R<HS4 103>
+Created a new atom named: CE1 within residue: .R<HS4 103>
+Created a new atom named: NE2 within residue: .R<HS4 103>
+Created a new atom named: CD2 within residue: .R<HS4 103>
+Created a new atom named: C within residue: .R<HS4 103>
+Created a new atom named: O within residue: .R<HS4 103>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 111>
+  Added missing heavy atom: .R<ILE 111>.A<CD1 14>
+Creating new UNIT for residue: HS4 sequence: 113
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 113>
+Created a new atom named: CA within residue: .R<HS4 113>
+Created a new atom named: CB within residue: .R<HS4 113>
+Created a new atom named: ND1 within residue: .R<HS4 113>
+Created a new atom named: CG within residue: .R<HS4 113>
+Created a new atom named: CE1 within residue: .R<HS4 113>
+Created a new atom named: NE2 within residue: .R<HS4 113>
+Created a new atom named: CD2 within residue: .R<HS4 113>
+Created a new atom named: C within residue: .R<HS4 113>
+Created a new atom named: O within residue: .R<HS4 113>
+Creating new UNIT for residue: TY4 sequence: 114
+Starting new chain with 
+Created a new atom named: N within residue: .R<TY4 114>
+Created a new atom named: CA within residue: .R<TY4 114>
+Created a new atom named: CB within residue: .R<TY4 114>
+Created a new atom named: CG within residue: .R<TY4 114>
+Created a new atom named: CD1 within residue: .R<TY4 114>
+Created a new atom named: CE1 within residue: .R<TY4 114>
+Created a new atom named: CZ within residue: .R<TY4 114>
+Created a new atom named: OH within residue: .R<TY4 114>
+Created a new atom named: CD2 within residue: .R<TY4 114>
+Created a new atom named: CE2 within residue: .R<TY4 114>
+Created a new atom named: C within residue: .R<TY4 114>
+Created a new atom named: O within residue: .R<TY4 114>
+Creating new UNIT for residue: HS4 sequence: 115
+Starting new chain with 
+Created a new atom named: N within residue: .R<HS4 115>
+Created a new atom named: CA within residue: .R<HS4 115>
+Created a new atom named: CB within residue: .R<HS4 115>
+Created a new atom named: ND1 within residue: .R<HS4 115>
+Created a new atom named: CG within residue: .R<HS4 115>
+Created a new atom named: CE1 within residue: .R<HS4 115>
+Created a new atom named: NE2 within residue: .R<HS4 115>
+Created a new atom named: CD2 within residue: .R<HS4 115>
+Created a new atom named: C within residue: .R<HS4 115>
+Created a new atom named: O within residue: .R<HS4 115>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 121
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 121>
+Created a new atom named: CA within residue: .R<TY4 121>
+Created a new atom named: CB within residue: .R<TY4 121>
+Created a new atom named: CG within residue: .R<TY4 121>
+Created a new atom named: CD1 within residue: .R<TY4 121>
+Created a new atom named: CE1 within residue: .R<TY4 121>
+Created a new atom named: CZ within residue: .R<TY4 121>
+Created a new atom named: OH within residue: .R<TY4 121>
+Created a new atom named: CD2 within residue: .R<TY4 121>
+Created a new atom named: CE2 within residue: .R<TY4 121>
+Created a new atom named: C within residue: .R<TY4 121>
+Created a new atom named: O within residue: .R<TY4 121>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 123
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 123>
+Created a new atom named: CA within residue: .R<TY4 123>
+Created a new atom named: CB within residue: .R<TY4 123>
+Created a new atom named: CG within residue: .R<TY4 123>
+Created a new atom named: CD1 within residue: .R<TY4 123>
+Created a new atom named: CE1 within residue: .R<TY4 123>
+Created a new atom named: CZ within residue: .R<TY4 123>
+Created a new atom named: OH within residue: .R<TY4 123>
+Created a new atom named: CD2 within residue: .R<TY4 123>
+Created a new atom named: CE2 within residue: .R<TY4 123>
+Created a new atom named: C within residue: .R<TY4 123>
+Created a new atom named: O within residue: .R<TY4 123>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: CY4 sequence: 134
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 134>
+Created a new atom named: CA within residue: .R<CY4 134>
+Created a new atom named: CB within residue: .R<CY4 134>
+Created a new atom named: SG within residue: .R<CY4 134>
+Created a new atom named: C within residue: .R<CY4 134>
+Created a new atom named: O within residue: .R<CY4 134>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 137>
+  Added missing heavy atom: .R<ILE 137>.A<CD1 14>
+Created a new atom named: CD within residue: .R<ILE 141>
+  Added missing heavy atom: .R<ILE 141>.A<CD1 14>
+Creating new UNIT for residue: HS4 sequence: 147
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 147>
+Created a new atom named: CA within residue: .R<HS4 147>
+Created a new atom named: CB within residue: .R<HS4 147>
+Created a new atom named: ND1 within residue: .R<HS4 147>
+Created a new atom named: CG within residue: .R<HS4 147>
+Created a new atom named: CE1 within residue: .R<HS4 147>
+Created a new atom named: NE2 within residue: .R<HS4 147>
+Created a new atom named: CD2 within residue: .R<HS4 147>
+Created a new atom named: C within residue: .R<HS4 147>
+Created a new atom named: O within residue: .R<HS4 147>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: HS4 sequence: 149
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 149>
+Created a new atom named: CA within residue: .R<HS4 149>
+Created a new atom named: CB within residue: .R<HS4 149>
+Created a new atom named: ND1 within residue: .R<HS4 149>
+Created a new atom named: CG within residue: .R<HS4 149>
+Created a new atom named: CE1 within residue: .R<HS4 149>
+Created a new atom named: NE2 within residue: .R<HS4 149>
+Created a new atom named: CD2 within residue: .R<HS4 149>
+Created a new atom named: C within residue: .R<HS4 149>
+Created a new atom named: O within residue: .R<HS4 149>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 150>
+  Added missing heavy atom: .R<ILE 150>.A<CD1 14>
+Created a new atom named: CD within residue: .R<ILE 152>
+  Added missing heavy atom: .R<ILE 152>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 158
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 158>
+Created a new atom named: CA within residue: .R<LY4 158>
+Created a new atom named: CB within residue: .R<LY4 158>
+Created a new atom named: CG within residue: .R<LY4 158>
+Created a new atom named: CD within residue: .R<LY4 158>
+Created a new atom named: CE within residue: .R<LY4 158>
+Created a new atom named: NZ within residue: .R<LY4 158>
+Created a new atom named: C within residue: .R<LY4 158>
+Created a new atom named: O within residue: .R<LY4 158>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 161>
+  Added missing heavy atom: .R<ILE 161>.A<CD1 14>
+Creating new UNIT for residue: HS4 sequence: 163
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 163>
+Created a new atom named: CA within residue: .R<HS4 163>
+Created a new atom named: CB within residue: .R<HS4 163>
+Created a new atom named: ND1 within residue: .R<HS4 163>
+Created a new atom named: CG within residue: .R<HS4 163>
+Created a new atom named: CE1 within residue: .R<HS4 163>
+Created a new atom named: NE2 within residue: .R<HS4 163>
+Created a new atom named: CD2 within residue: .R<HS4 163>
+Created a new atom named: C within residue: .R<HS4 163>
+Created a new atom named: O within residue: .R<HS4 163>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 167
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 167>
+Created a new atom named: CA within residue: .R<LY4 167>
+Created a new atom named: CB within residue: .R<LY4 167>
+Created a new atom named: CG within residue: .R<LY4 167>
+Created a new atom named: CD within residue: .R<LY4 167>
+Created a new atom named: CE within residue: .R<LY4 167>
+Created a new atom named: NZ within residue: .R<LY4 167>
+Created a new atom named: C within residue: .R<LY4 167>
+Created a new atom named: O within residue: .R<LY4 167>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 169
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 169>
+Created a new atom named: CA within residue: .R<LY4 169>
+Created a new atom named: CB within residue: .R<LY4 169>
+Created a new atom named: CG within residue: .R<LY4 169>
+Created a new atom named: CD within residue: .R<LY4 169>
+Created a new atom named: CE within residue: .R<LY4 169>
+Created a new atom named: NZ within residue: .R<LY4 169>
+Created a new atom named: C within residue: .R<LY4 169>
+Created a new atom named: O within residue: .R<LY4 169>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 171>
+  Added missing heavy atom: .R<ILE 171>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 174
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 174>
+Created a new atom named: CA within residue: .R<LY4 174>
+Created a new atom named: CB within residue: .R<LY4 174>
+Created a new atom named: CG within residue: .R<LY4 174>
+Created a new atom named: CD within residue: .R<LY4 174>
+Created a new atom named: CE within residue: .R<LY4 174>
+Created a new atom named: NZ within residue: .R<LY4 174>
+Created a new atom named: C within residue: .R<LY4 174>
+Created a new atom named: O within residue: .R<LY4 174>
+Creating new UNIT for residue: LY4 sequence: 175
+Starting new chain with 
+Created a new atom named: N within residue: .R<LY4 175>
+Created a new atom named: CA within residue: .R<LY4 175>
+Created a new atom named: CB within residue: .R<LY4 175>
+Created a new atom named: CG within residue: .R<LY4 175>
+Created a new atom named: CD within residue: .R<LY4 175>
+Created a new atom named: CE within residue: .R<LY4 175>
+Created a new atom named: NZ within residue: .R<LY4 175>
+Created a new atom named: C within residue: .R<LY4 175>
+Created a new atom named: O within residue: .R<LY4 175>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: CY4 sequence: 179
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 179>
+Created a new atom named: CA within residue: .R<CY4 179>
+Created a new atom named: CB within residue: .R<CY4 179>
+Created a new atom named: SG within residue: .R<CY4 179>
+Created a new atom named: C within residue: .R<CY4 179>
+Created a new atom named: O within residue: .R<CY4 179>
+Creating new UNIT for residue: CY4 sequence: 180
+Starting new chain with 
+Created a new atom named: N within residue: .R<CY4 180>
+Created a new atom named: CA within residue: .R<CY4 180>
+Created a new atom named: CB within residue: .R<CY4 180>
+Created a new atom named: SG within residue: .R<CY4 180>
+Created a new atom named: C within residue: .R<CY4 180>
+Created a new atom named: O within residue: .R<CY4 180>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 181>
+  Added missing heavy atom: .R<ILE 181>.A<CD1 14>
+Creating new UNIT for residue: HS4 sequence: 190
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 190>
+Created a new atom named: CA within residue: .R<HS4 190>
+Created a new atom named: CB within residue: .R<HS4 190>
+Created a new atom named: ND1 within residue: .R<HS4 190>
+Created a new atom named: CG within residue: .R<HS4 190>
+Created a new atom named: CE1 within residue: .R<HS4 190>
+Created a new atom named: NE2 within residue: .R<HS4 190>
+Created a new atom named: CD2 within residue: .R<HS4 190>
+Created a new atom named: C within residue: .R<HS4 190>
+Created a new atom named: O within residue: .R<HS4 190>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 208
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 208>
+Created a new atom named: CA within residue: .R<LY4 208>
+Created a new atom named: CB within residue: .R<LY4 208>
+Created a new atom named: CG within residue: .R<LY4 208>
+Created a new atom named: CD within residue: .R<LY4 208>
+Created a new atom named: CE within residue: .R<LY4 208>
+Created a new atom named: NZ within residue: .R<LY4 208>
+Created a new atom named: C within residue: .R<LY4 208>
+Created a new atom named: O within residue: .R<LY4 208>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 210
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 210>
+Created a new atom named: CA within residue: .R<TY4 210>
+Created a new atom named: CB within residue: .R<TY4 210>
+Created a new atom named: CG within residue: .R<TY4 210>
+Created a new atom named: CD1 within residue: .R<TY4 210>
+Created a new atom named: CE1 within residue: .R<TY4 210>
+Created a new atom named: CZ within residue: .R<TY4 210>
+Created a new atom named: OH within residue: .R<TY4 210>
+Created a new atom named: CD2 within residue: .R<TY4 210>
+Created a new atom named: CE2 within residue: .R<TY4 210>
+Created a new atom named: C within residue: .R<TY4 210>
+Created a new atom named: O within residue: .R<TY4 210>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 220>
+  Added missing heavy atom: .R<ILE 220>.A<CD1 14>
+Creating new UNIT for residue: CY4 sequence: 224
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 224>
+Created a new atom named: CA within residue: .R<CY4 224>
+Created a new atom named: CB within residue: .R<CY4 224>
+Created a new atom named: SG within residue: .R<CY4 224>
+Created a new atom named: C within residue: .R<CY4 224>
+Created a new atom named: O within residue: .R<CY4 224>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 228
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 228>
+Created a new atom named: CA within residue: .R<TY4 228>
+Created a new atom named: CB within residue: .R<TY4 228>
+Created a new atom named: CG within residue: .R<TY4 228>
+Created a new atom named: CD1 within residue: .R<TY4 228>
+Created a new atom named: CE1 within residue: .R<TY4 228>
+Created a new atom named: CZ within residue: .R<TY4 228>
+Created a new atom named: OH within residue: .R<TY4 228>
+Created a new atom named: CD2 within residue: .R<TY4 228>
+Created a new atom named: CE2 within residue: .R<TY4 228>
+Created a new atom named: C within residue: .R<TY4 228>
+Created a new atom named: O within residue: .R<TY4 228>
+Creating new UNIT for residue: LY4 sequence: 229
+Starting new chain with 
+Created a new atom named: N within residue: .R<LY4 229>
+Created a new atom named: CA within residue: .R<LY4 229>
+Created a new atom named: CB within residue: .R<LY4 229>
+Created a new atom named: CG within residue: .R<LY4 229>
+Created a new atom named: CD within residue: .R<LY4 229>
+Created a new atom named: CE within residue: .R<LY4 229>
+Created a new atom named: NZ within residue: .R<LY4 229>
+Created a new atom named: C within residue: .R<LY4 229>
+Created a new atom named: O within residue: .R<LY4 229>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 233>
+  Added missing heavy atom: .R<ILE 233>.A<CD1 14>
+Created a new atom named: CD within residue: .R<ILE 252>
+  Added missing heavy atom: .R<ILE 252>.A<CD1 14>
+Creating new UNIT for residue: TY4 sequence: 256
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 256>
+Created a new atom named: CA within residue: .R<TY4 256>
+Created a new atom named: CB within residue: .R<TY4 256>
+Created a new atom named: CG within residue: .R<TY4 256>
+Created a new atom named: CD1 within residue: .R<TY4 256>
+Created a new atom named: CE1 within residue: .R<TY4 256>
+Created a new atom named: CZ within residue: .R<TY4 256>
+Created a new atom named: OH within residue: .R<TY4 256>
+Created a new atom named: CD2 within residue: .R<TY4 256>
+Created a new atom named: CE2 within residue: .R<TY4 256>
+Created a new atom named: C within residue: .R<TY4 256>
+Created a new atom named: O within residue: .R<TY4 256>
+Creating new UNIT for residue: LY4 sequence: 257
+Starting new chain with 
+Created a new atom named: N within residue: .R<LY4 257>
+Created a new atom named: CA within residue: .R<LY4 257>
+Created a new atom named: CB within residue: .R<LY4 257>
+Created a new atom named: CG within residue: .R<LY4 257>
+Created a new atom named: CD within residue: .R<LY4 257>
+Created a new atom named: CE within residue: .R<LY4 257>
+Created a new atom named: NZ within residue: .R<LY4 257>
+Created a new atom named: C within residue: .R<LY4 257>
+Created a new atom named: O within residue: .R<LY4 257>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 261
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 261>
+Created a new atom named: CA within residue: .R<TY4 261>
+Created a new atom named: CB within residue: .R<TY4 261>
+Created a new atom named: CG within residue: .R<TY4 261>
+Created a new atom named: CD1 within residue: .R<TY4 261>
+Created a new atom named: CE1 within residue: .R<TY4 261>
+Created a new atom named: CZ within residue: .R<TY4 261>
+Created a new atom named: OH within residue: .R<TY4 261>
+Created a new atom named: CD2 within residue: .R<TY4 261>
+Created a new atom named: CE2 within residue: .R<TY4 261>
+Created a new atom named: C within residue: .R<TY4 261>
+Created a new atom named: O within residue: .R<TY4 261>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 275
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 275>
+Created a new atom named: CA within residue: .R<LY4 275>
+Created a new atom named: CB within residue: .R<LY4 275>
+Created a new atom named: CG within residue: .R<LY4 275>
+Created a new atom named: CD within residue: .R<LY4 275>
+Created a new atom named: CE within residue: .R<LY4 275>
+Created a new atom named: NZ within residue: .R<LY4 275>
+Created a new atom named: C within residue: .R<LY4 275>
+Created a new atom named: O within residue: .R<LY4 275>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: CY4 sequence: 278
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 278>
+Created a new atom named: CA within residue: .R<CY4 278>
+Created a new atom named: CB within residue: .R<CY4 278>
+Created a new atom named: SG within residue: .R<CY4 278>
+Created a new atom named: C within residue: .R<CY4 278>
+Created a new atom named: O within residue: .R<CY4 278>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 286>
+  Added missing heavy atom: .R<ILE 286>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 301
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 301>
+Created a new atom named: CA within residue: .R<LY4 301>
+Created a new atom named: CB within residue: .R<LY4 301>
+Created a new atom named: CG within residue: .R<LY4 301>
+Created a new atom named: CD within residue: .R<LY4 301>
+Created a new atom named: CE within residue: .R<LY4 301>
+Created a new atom named: NZ within residue: .R<LY4 301>
+Created a new atom named: C within residue: .R<LY4 301>
+Created a new atom named: O within residue: .R<LY4 301>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 304
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 304>
+Created a new atom named: CA within residue: .R<LY4 304>
+Created a new atom named: CB within residue: .R<LY4 304>
+Created a new atom named: CG within residue: .R<LY4 304>
+Created a new atom named: CD within residue: .R<LY4 304>
+Created a new atom named: CE within residue: .R<LY4 304>
+Created a new atom named: NZ within residue: .R<LY4 304>
+Created a new atom named: C within residue: .R<LY4 304>
+Created a new atom named: O within residue: .R<LY4 304>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: CY4 sequence: 306
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 306>
+Created a new atom named: CA within residue: .R<CY4 306>
+Created a new atom named: CB within residue: .R<CY4 306>
+Created a new atom named: SG within residue: .R<CY4 306>
+Created a new atom named: C within residue: .R<CY4 306>
+Created a new atom named: O within residue: .R<CY4 306>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 308
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 308>
+Created a new atom named: CA within residue: .R<TY4 308>
+Created a new atom named: CB within residue: .R<TY4 308>
+Created a new atom named: CG within residue: .R<TY4 308>
+Created a new atom named: CD1 within residue: .R<TY4 308>
+Created a new atom named: CE1 within residue: .R<TY4 308>
+Created a new atom named: CZ within residue: .R<TY4 308>
+Created a new atom named: OH within residue: .R<TY4 308>
+Created a new atom named: CD2 within residue: .R<TY4 308>
+Created a new atom named: CE2 within residue: .R<TY4 308>
+Created a new atom named: C within residue: .R<TY4 308>
+Created a new atom named: O within residue: .R<TY4 308>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 320>
+  Added missing heavy atom: .R<ILE 320>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 321
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 321>
+Created a new atom named: CA within residue: .R<LY4 321>
+Created a new atom named: CB within residue: .R<LY4 321>
+Created a new atom named: CG within residue: .R<LY4 321>
+Created a new atom named: CD within residue: .R<LY4 321>
+Created a new atom named: CE within residue: .R<LY4 321>
+Created a new atom named: NZ within residue: .R<LY4 321>
+Created a new atom named: C within residue: .R<LY4 321>
+Created a new atom named: O within residue: .R<LY4 321>
+Creating new UNIT for residue: LY4 sequence: 322
+Starting new chain with 
+Created a new atom named: N within residue: .R<LY4 322>
+Created a new atom named: CA within residue: .R<LY4 322>
+Created a new atom named: CB within residue: .R<LY4 322>
+Created a new atom named: CG within residue: .R<LY4 322>
+Created a new atom named: CD within residue: .R<LY4 322>
+Created a new atom named: CE within residue: .R<LY4 322>
+Created a new atom named: NZ within residue: .R<LY4 322>
+Created a new atom named: C within residue: .R<LY4 322>
+Created a new atom named: O within residue: .R<LY4 322>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 326
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 326>
+Created a new atom named: CA within residue: .R<LY4 326>
+Created a new atom named: CB within residue: .R<LY4 326>
+Created a new atom named: CG within residue: .R<LY4 326>
+Created a new atom named: CD within residue: .R<LY4 326>
+Created a new atom named: CE within residue: .R<LY4 326>
+Created a new atom named: NZ within residue: .R<LY4 326>
+Created a new atom named: C within residue: .R<LY4 326>
+Created a new atom named: O within residue: .R<LY4 326>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 327>
+  Added missing heavy atom: .R<ILE 327>.A<CD1 14>
+Created a new atom named: OT1 within residue: .R<AS4 328>
+Created a new atom named: OT2 within residue: .R<AS4 328>
+  Added missing heavy atom: .R<AS4 328>.A<O 13>
+Created a new atom named: CD within residue: .R<ILE 335>
+  Added missing heavy atom: .R<ILE 335>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 345
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 345>
+Created a new atom named: CA within residue: .R<LY4 345>
+Created a new atom named: CB within residue: .R<LY4 345>
+Created a new atom named: CG within residue: .R<LY4 345>
+Created a new atom named: CD within residue: .R<LY4 345>
+Created a new atom named: CE within residue: .R<LY4 345>
+Created a new atom named: NZ within residue: .R<LY4 345>
+Created a new atom named: C within residue: .R<LY4 345>
+Created a new atom named: O within residue: .R<LY4 345>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: CY4 sequence: 350
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<CY4 350>
+Created a new atom named: CA within residue: .R<CY4 350>
+Created a new atom named: CB within residue: .R<CY4 350>
+Created a new atom named: SG within residue: .R<CY4 350>
+Created a new atom named: C within residue: .R<CY4 350>
+Created a new atom named: O within residue: .R<CY4 350>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: HS4 sequence: 353
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 353>
+Created a new atom named: CA within residue: .R<HS4 353>
+Created a new atom named: CB within residue: .R<HS4 353>
+Created a new atom named: ND1 within residue: .R<HS4 353>
+Created a new atom named: CG within residue: .R<HS4 353>
+Created a new atom named: CE1 within residue: .R<HS4 353>
+Created a new atom named: NE2 within residue: .R<HS4 353>
+Created a new atom named: CD2 within residue: .R<HS4 353>
+Created a new atom named: C within residue: .R<HS4 353>
+Created a new atom named: O within residue: .R<HS4 353>
+Creating new UNIT for residue: TY4 sequence: 354
+Starting new chain with 
+Created a new atom named: N within residue: .R<TY4 354>
+Created a new atom named: CA within residue: .R<TY4 354>
+Created a new atom named: CB within residue: .R<TY4 354>
+Created a new atom named: CG within residue: .R<TY4 354>
+Created a new atom named: CD1 within residue: .R<TY4 354>
+Created a new atom named: CE1 within residue: .R<TY4 354>
+Created a new atom named: CZ within residue: .R<TY4 354>
+Created a new atom named: OH within residue: .R<TY4 354>
+Created a new atom named: CD2 within residue: .R<TY4 354>
+Created a new atom named: CE2 within residue: .R<TY4 354>
+Created a new atom named: C within residue: .R<TY4 354>
+Created a new atom named: O within residue: .R<TY4 354>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 362
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 362>
+Created a new atom named: CA within residue: .R<LY4 362>
+Created a new atom named: CB within residue: .R<LY4 362>
+Created a new atom named: CG within residue: .R<LY4 362>
+Created a new atom named: CD within residue: .R<LY4 362>
+Created a new atom named: CE within residue: .R<LY4 362>
+Created a new atom named: NZ within residue: .R<LY4 362>
+Created a new atom named: C within residue: .R<LY4 362>
+Created a new atom named: O within residue: .R<LY4 362>
+Creating new UNIT for residue: LY4 sequence: 363
+Starting new chain with 
+Created a new atom named: N within residue: .R<LY4 363>
+Created a new atom named: CA within residue: .R<LY4 363>
+Created a new atom named: CB within residue: .R<LY4 363>
+Created a new atom named: CG within residue: .R<LY4 363>
+Created a new atom named: CD within residue: .R<LY4 363>
+Created a new atom named: CE within residue: .R<LY4 363>
+Created a new atom named: NZ within residue: .R<LY4 363>
+Created a new atom named: C within residue: .R<LY4 363>
+Created a new atom named: O within residue: .R<LY4 363>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 372
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 372>
+Created a new atom named: CA within residue: .R<LY4 372>
+Created a new atom named: CB within residue: .R<LY4 372>
+Created a new atom named: CG within residue: .R<LY4 372>
+Created a new atom named: CD within residue: .R<LY4 372>
+Created a new atom named: CE within residue: .R<LY4 372>
+Created a new atom named: NZ within residue: .R<LY4 372>
+Created a new atom named: C within residue: .R<LY4 372>
+Created a new atom named: O within residue: .R<LY4 372>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 375
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 375>
+Created a new atom named: CA within residue: .R<LY4 375>
+Created a new atom named: CB within residue: .R<LY4 375>
+Created a new atom named: CG within residue: .R<LY4 375>
+Created a new atom named: CD within residue: .R<LY4 375>
+Created a new atom named: CE within residue: .R<LY4 375>
+Created a new atom named: NZ within residue: .R<LY4 375>
+Created a new atom named: C within residue: .R<LY4 375>
+Created a new atom named: O within residue: .R<LY4 375>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 380
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 380>
+Created a new atom named: CA within residue: .R<LY4 380>
+Created a new atom named: CB within residue: .R<LY4 380>
+Created a new atom named: CG within residue: .R<LY4 380>
+Created a new atom named: CD within residue: .R<LY4 380>
+Created a new atom named: CE within residue: .R<LY4 380>
+Created a new atom named: NZ within residue: .R<LY4 380>
+Created a new atom named: C within residue: .R<LY4 380>
+Created a new atom named: O within residue: .R<LY4 380>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 384>
+  Added missing heavy atom: .R<ILE 384>.A<CD1 14>
+Creating new UNIT for residue: LY4 sequence: 401
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 401>
+Created a new atom named: CA within residue: .R<LY4 401>
+Created a new atom named: CB within residue: .R<LY4 401>
+Created a new atom named: CG within residue: .R<LY4 401>
+Created a new atom named: CD within residue: .R<LY4 401>
+Created a new atom named: CE within residue: .R<LY4 401>
+Created a new atom named: NZ within residue: .R<LY4 401>
+Created a new atom named: C within residue: .R<LY4 401>
+Created a new atom named: O within residue: .R<LY4 401>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 404>
+  Added missing heavy atom: .R<ILE 404>.A<CD1 14>
+Creating new UNIT for residue: TY4 sequence: 408
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 408>
+Created a new atom named: CA within residue: .R<TY4 408>
+Created a new atom named: CB within residue: .R<TY4 408>
+Created a new atom named: CG within residue: .R<TY4 408>
+Created a new atom named: CD1 within residue: .R<TY4 408>
+Created a new atom named: CE1 within residue: .R<TY4 408>
+Created a new atom named: CZ within residue: .R<TY4 408>
+Created a new atom named: OH within residue: .R<TY4 408>
+Created a new atom named: CD2 within residue: .R<TY4 408>
+Created a new atom named: CE2 within residue: .R<TY4 408>
+Created a new atom named: C within residue: .R<TY4 408>
+Created a new atom named: O within residue: .R<TY4 408>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: TY4 sequence: 410
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<TY4 410>
+Created a new atom named: CA within residue: .R<TY4 410>
+Created a new atom named: CB within residue: .R<TY4 410>
+Created a new atom named: CG within residue: .R<TY4 410>
+Created a new atom named: CD1 within residue: .R<TY4 410>
+Created a new atom named: CE1 within residue: .R<TY4 410>
+Created a new atom named: CZ within residue: .R<TY4 410>
+Created a new atom named: OH within residue: .R<TY4 410>
+Created a new atom named: CD2 within residue: .R<TY4 410>
+Created a new atom named: CE2 within residue: .R<TY4 410>
+Created a new atom named: C within residue: .R<TY4 410>
+Created a new atom named: O within residue: .R<TY4 410>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: HS4 sequence: 415
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 415>
+Created a new atom named: CA within residue: .R<HS4 415>
+Created a new atom named: CB within residue: .R<HS4 415>
+Created a new atom named: ND1 within residue: .R<HS4 415>
+Created a new atom named: CG within residue: .R<HS4 415>
+Created a new atom named: CE1 within residue: .R<HS4 415>
+Created a new atom named: NE2 within residue: .R<HS4 415>
+Created a new atom named: CD2 within residue: .R<HS4 415>
+Created a new atom named: C within residue: .R<HS4 415>
+Created a new atom named: O within residue: .R<HS4 415>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: CD within residue: .R<ILE 418>
+  Added missing heavy atom: .R<ILE 418>.A<CD1 14>
+Created a new atom named: CD within residue: .R<ILE 419>
+  Added missing heavy atom: .R<ILE 419>.A<CD1 14>
+Creating new UNIT for residue: HS4 sequence: 422
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<HS4 422>
+Created a new atom named: CA within residue: .R<HS4 422>
+Created a new atom named: CB within residue: .R<HS4 422>
+Created a new atom named: ND1 within residue: .R<HS4 422>
+Created a new atom named: CG within residue: .R<HS4 422>
+Created a new atom named: CE1 within residue: .R<HS4 422>
+Created a new atom named: NE2 within residue: .R<HS4 422>
+Created a new atom named: CD2 within residue: .R<HS4 422>
+Created a new atom named: C within residue: .R<HS4 422>
+Created a new atom named: O within residue: .R<HS4 422>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Creating new UNIT for residue: LY4 sequence: 433
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue () missing connect0 atom.
+Created a new atom named: N within residue: .R<LY4 433>
+Created a new atom named: CA within residue: .R<LY4 433>
+Created a new atom named: CB within residue: .R<LY4 433>
+Created a new atom named: CG within residue: .R<LY4 433>
+Created a new atom named: CD within residue: .R<LY4 433>
+Created a new atom named: CE within residue: .R<LY4 433>
+Created a new atom named: NZ within residue: .R<LY4 433>
+Created a new atom named: C within residue: .R<LY4 433>
+Created a new atom named: O within residue: .R<LY4 433>
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+One sided connection. Residue (default_name) missing connect1 atom.
+Created a new atom named: OT1 within residue: .R<GL4 435>
+Created a new atom named: OT2 within residue: .R<GL4 435>
+  Added missing heavy atom: .R<GL4 435>.A<O 16>
+  total atoms in file: 3440
+  Leap added 3069 missing atoms according to residue templates:
+       25 Heavy
+       3044 H / lone pairs
+  The file contained 592 atoms not in residue templates
+> 
+> saveAmberParm prot R206H_titratable.parm7 R206H_titratable.rst7
+Checking Unit.
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (-22.000000) is not zero.
+FATAL:  Atom .R<HS4 15>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 15>.A<O 10> does not have a type.
+FATAL:  Atom .R<CY4 17>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 17>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 17>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 17>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 17>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 17>.A<O 6> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 35>.A<O 10> does not have a type.
+FATAL:  Atom .R<ILE 37>.A<CD 20> does not have a type.
+FATAL:  Atom .R<CY4 42>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 42>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 42>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 42>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 42>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 42>.A<O 6> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 45>.A<O 9> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 48>.A<O 12> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 64>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 65>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 72>.A<O 9> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 81>.A<O 12> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 88>.A<O 10> does not have a type.
+FATAL:  Atom .R<ILE 91>.A<CD 20> does not have a type.
+FATAL:  Atom .R<ILE 95>.A<CD 20> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 103>.A<O 10> does not have a type.
+FATAL:  Atom .R<ILE 111>.A<CD 20> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 113>.A<O 10> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 114>.A<O 12> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 115>.A<O 10> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 121>.A<O 12> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 123>.A<O 12> does not have a type.
+FATAL:  Atom .R<CY4 134>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 134>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 134>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 134>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 134>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 134>.A<O 6> does not have a type.
+FATAL:  Atom .R<ILE 137>.A<CD 20> does not have a type.
+FATAL:  Atom .R<ILE 141>.A<CD 20> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 147>.A<O 10> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 149>.A<O 10> does not have a type.
+FATAL:  Atom .R<ILE 150>.A<CD 20> does not have a type.
+FATAL:  Atom .R<ILE 152>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 158>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 161>.A<CD 20> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 163>.A<O 10> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 167>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 169>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 171>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 174>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 175>.A<O 9> does not have a type.
+FATAL:  Atom .R<CY4 179>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 179>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 179>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 179>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 179>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 179>.A<O 6> does not have a type.
+FATAL:  Atom .R<CY4 180>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 180>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 180>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 180>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 180>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 180>.A<O 6> does not have a type.
+FATAL:  Atom .R<ILE 181>.A<CD 20> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 190>.A<O 10> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 208>.A<O 9> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 210>.A<O 12> does not have a type.
+FATAL:  Atom .R<ILE 220>.A<CD 20> does not have a type.
+FATAL:  Atom .R<CY4 224>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 224>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 224>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 224>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 224>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 224>.A<O 6> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 228>.A<O 12> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 229>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 233>.A<CD 20> does not have a type.
+FATAL:  Atom .R<ILE 252>.A<CD 20> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 256>.A<O 12> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 257>.A<O 9> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 261>.A<O 12> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 275>.A<O 9> does not have a type.
+FATAL:  Atom .R<CY4 278>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 278>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 278>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 278>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 278>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 278>.A<O 6> does not have a type.
+FATAL:  Atom .R<ILE 286>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 301>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 304>.A<O 9> does not have a type.
+FATAL:  Atom .R<CY4 306>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 306>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 306>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 306>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 306>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 306>.A<O 6> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 308>.A<O 12> does not have a type.
+FATAL:  Atom .R<ILE 320>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 321>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 322>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 326>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 327>.A<CD 20> does not have a type.
+FATAL:  Atom .R<AS4 328>.A<OT1 21> does not have a type.
+FATAL:  Atom .R<AS4 328>.A<OT2 22> does not have a type.
+FATAL:  Atom .R<ILE 335>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 345>.A<O 9> does not have a type.
+FATAL:  Atom .R<CY4 350>.A<N 1> does not have a type.
+FATAL:  Atom .R<CY4 350>.A<CA 2> does not have a type.
+FATAL:  Atom .R<CY4 350>.A<CB 3> does not have a type.
+FATAL:  Atom .R<CY4 350>.A<SG 4> does not have a type.
+FATAL:  Atom .R<CY4 350>.A<C 5> does not have a type.
+FATAL:  Atom .R<CY4 350>.A<O 6> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 353>.A<O 10> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 354>.A<O 12> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 362>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 363>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 372>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 375>.A<O 9> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 380>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 384>.A<CD 20> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 401>.A<O 9> does not have a type.
+FATAL:  Atom .R<ILE 404>.A<CD 20> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 408>.A<O 12> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<N 1> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CA 2> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CB 3> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CG 4> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CD1 5> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CZ 7> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<OH 8> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CD2 9> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<CE2 10> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<C 11> does not have a type.
+FATAL:  Atom .R<TY4 410>.A<O 12> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 415>.A<O 10> does not have a type.
+FATAL:  Atom .R<ILE 418>.A<CD 20> does not have a type.
+FATAL:  Atom .R<ILE 419>.A<CD 20> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<N 1> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<CA 2> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<CB 3> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<ND1 4> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<CG 5> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<CE1 6> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<NE2 7> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<CD2 8> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<C 9> does not have a type.
+FATAL:  Atom .R<HS4 422>.A<O 10> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<N 1> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<CA 2> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<CB 3> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<CG 4> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<CD 5> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<CE 6> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<NZ 7> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<C 8> does not have a type.
+FATAL:  Atom .R<LY4 433>.A<O 9> does not have a type.
+FATAL:  Atom .R<GL4 435>.A<OT1 20> does not have a type.
+FATAL:  Atom .R<GL4 435>.A<OT2 21> does not have a type.
+
+/cm/shared/apps/amber18/bin/teLeap: Fatal Error!
+Failed to generate parameters
+
+Exiting LEaP: Errors = 1; Warnings = 163; Notes = 0.
+log started: Tue Sep  3 16:31:15 2019
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the ff10 force field
+>>> # ----- NOTE: this is designed for PDB format 3!
+>>> #       ff10 =  ff99SB for proteins; ff99bsc0 for DNA; ff99sbsc_chiOL3 for RNA
+>>> #       phosphoaa parms from N. Homeyer, A.H.C. Horn, H. Lanig, H. Sticht
+>>> #           J. Mol. Model. 2006, 12, 281-289.  OP vdW parameters modified
+>>> #           by T. Steinbrecher and J. Latzer.
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "H"   "H" "sp3" }
+>>> 	{ "HO"  "H" "sp3" }
+>>> 	{ "HS"  "H" "sp3" }
+>>> 	{ "H1"  "H" "sp3" }
+>>> 	{ "H2"  "H" "sp3" }
+>>> 	{ "H3"  "H" "sp3" }
+>>> 	{ "H4"  "H" "sp3" }
+>>> 	{ "H5"  "H" "sp3" }
+>>> 	{ "HW"  "H" "sp3" }
+>>> 	{ "HC"  "H" "sp3" }
+>>> 	{ "HA"  "H" "sp3" }
+>>> 	{ "HP"  "H" "sp3" }
+>>> 	{ "HZ"  "H" "sp3" }
+>>> 	{ "OH"  "O" "sp3" }
+>>> 	{ "OS"  "O" "sp3" }
+>>> 	{ "O"   "O" "sp2" }
+>>> 	{ "O2"  "O" "sp2" }
+>>> 	{ "OP"  "O" "sp2" }
+>>> 	{ "OW"  "O" "sp3" }
+>>> 	{ "CT"  "C" "sp3" }
+>>> 	{ "CX"  "C" "sp3" }
+>>> 	{ "CH"  "C" "sp3" }
+>>> 	{ "CS"  "C" "sp2" }
+>>> 	{ "C"   "C" "sp2" }
+>>> 	{ "C*"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CB"  "C" "sp2" }
+>>> 	{ "CC"  "C" "sp2" }
+>>> 	{ "CN"  "C" "sp2" }
+>>> 	{ "CM"  "C" "sp2" }
+>>> 	{ "CK"  "C" "sp2" }
+>>> 	{ "CQ"  "C" "sp2" }
+>>> 	{ "CD"  "C" "sp2" }
+>>> 	{ "C5"  "C" "sp2" }
+>>> 	{ "C4"  "C" "sp2" }
+>>> 	{ "CP"  "C" "sp2" }
+>>> 	{ "CI"  "C" "sp3" }
+>>> 	{ "CJ"  "C" "sp2" }
+>>> 	{ "CW"  "C" "sp2" }
+>>> 	{ "CV"  "C" "sp2" }
+>>> 	{ "CR"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CY"  "C" "sp2" }
+>>> 	{ "C0"  "Ca" "sp2" }
+>>> 	{ "MG"  "Mg" "sp3" }
+>>> 	{ "N"   "N" "sp2" }
+>>> 	{ "NA"  "N" "sp2" }
+>>> 	{ "N2"  "N" "sp2" }
+>>> 	{ "N*"  "N" "sp2" }
+>>> 	{ "NP"  "N" "sp2" }
+>>> 	{ "NQ"  "N" "sp2" }
+>>> 	{ "NB"  "N" "sp2" }
+>>> 	{ "NC"  "N" "sp2" }
+>>> 	{ "NT"  "N" "sp3" }
+>>> 	{ "NY"  "N" "sp2" }
+>>> 	{ "N3"  "N" "sp3" }
+>>> 	{ "S"   "S" "sp3" }
+>>> 	{ "SH"  "S" "sp3" }
+>>> 	{ "P"   "P" "sp3" }
+>>> 	{ "LP"  ""  "sp3" }
+>>> 	{ "EP"  ""  "sp3" }
+>>> 	{ "F"   "F" "sp3" }
+>>> 	{ "Cl"  "Cl" "sp3" }
+>>> 	{ "Br"  "Br" "sp3" }
+>>> 	{ "I"   "I"  "sp3" }
+>>> 	{ "F-"   "F" "sp3" }
+>>> 	{ "Cl-"  "Cl" "sp3" }
+>>> 	{ "Br-"  "Br" "sp3" }
+>>> 	{ "I-"   "I"  "sp3" }
+>>> 	{ "Li+"  "Li"  "sp3" }
+>>> 	{ "Na+"  "Na"  "sp3" }
+>>> 	{ "K+"  "K"  "sp3" }
+>>> 	{ "Rb+"  "Rb"  "sp3" }
+>>> 	{ "Cs+"  "Cs"  "sp3" }
+>>> 	{ "Mg+"  "Mg"  "sp3" }
+>>> # glycam
+>>> 	{ "OG"  "O" "sp3" }
+>>> 	{ "OL"  "O" "sp3" }
+>>> 	{ "AC"  "C" "sp3" }
+>>> 	{ "EC"  "C" "sp3" }
+>>> }
+>>> #
+>>> #	Load the main parameter set.
+>>> #
+>>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>>> #
+>>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>>> #
+>>> loadOff amino10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/amino10.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>>> loadOff aminoct10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminoct10.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>>> loadOff aminont10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminont10.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>>> loadOff oldff/phosphoaa10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/oldff/phosphoaa10.lib
+Loading: H2D
+Loading: PTR
+Loading: S1P
+Loading: SEP
+Loading: T1P
+Loading: TPO
+Loading: Y1P
+>>> loadOff nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/nucleic10.lib
+Loading: A
+Loading: A3
+Loading: A5
+Loading: AN
+Loading: C
+Loading: C3
+Loading: C5
+Loading: CN
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: G
+Loading: G3
+Loading: G5
+Loading: GN
+Loading: OHE
+Loading: U
+Loading: U3
+Loading: U5
+Loading: UN
+>>> #
+>>> #       Load water and ions
+>>> # 
+>>> loadOff atomic_ions.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>>> loadOff solvents.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>>> HOH = TP3
+>>> WAT = TP3
+>>> 
+>>> #
+>>> #	Define the PDB name map for the amino acids and nucleic acids
+>>> #
+>>> addPdbResMap {
+>>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>>>   { 0 "G" "G5"  } { 1 "G" "G3"  } 
+>>>   { 0 "A" "A5"  } { 1 "A" "A3"  } 
+>>>   { 0 "C" "C5"  } { 1 "C" "C3"  } 
+>>>   { 0 "U" "U5"  } { 1 "U" "U3"  } 
+>>>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>>>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>>>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>>>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }  
+>>> #  some old Amber residue names for RNA:
+>>>   { 0  "RA5" "A5" } { 1 "RA3" "A3"} {"RA" "A" }
+>>>   { 0  "RC5" "C5" } { 1 "RC3" "C3"} {"RC" "C" }
+>>>   { 0  "RG5" "G5" } { 1 "RG3" "G3"} {"RG" "G" }
+>>>   { 0  "RU5" "U5" } { 1 "RU3" "U3"} {"RU" "U" }
+>>> #  some really old Amber residue names, assuming DNA:
+>>>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>>>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>>>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>>>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>>> #  uncomment out the following if you have this old style RNA files:
+>>> # { 0 "GUA" "G5"  } { 1 "GUA" "G3"  } { "GUA" "G" }
+>>> # { 0 "ADE" "A5"  } { 1 "ADE" "A3"  } { "ADE" "A" }
+>>> # { 0 "CYT" "C5"  } { 1 "CYT" "C3"  } { "CYT" "C" }
+>>> # { 0 "THY" "T5"  } { 1 "THY" "T3"  } { "THY" "T" }
+>>> 
+>>> }
+>>> 
+>>> #  try to be good about reading in really old atom names as well:
+>>> addPdbAtomMap {
+>>>   { "O5*" "O5'" }
+>>>   { "C5*" "C5'" }
+>>>   { "C4*" "C4'" }
+>>>   { "O4*" "O4'" }
+>>>   { "C3*" "C3'" }
+>>>   { "O3*" "O3'" }
+>>>   { "C2*" "C2'" }
+>>>   { "O2*" "O2'" }
+>>>   { "C1*" "C1'" }
+>>>   { "C5M" "C7"  }
+>>>   { "H1*" "H1'" }
+>>>   { "H2*1" "H2'" }
+>>>   { "H2*2" "H2''" }
+>>>   { "H2'1" "H2'" }
+>>>   { "H2'2" "H2''" }
+>>>   { "H3*" "H3'" }
+>>>   { "H4*" "H4'" }
+>>>   { "H5*1" "H5'" }
+>>>   { "H5*2" "H5''" }
+>>>   { "H5'1" "H5'" }
+>>>   { "H5'2" "H5''" }
+>>>   { "HO'2" "HO2'" }
+>>>   { "H5T"  "HO5'" }
+>>>   { "H3T"  "HO3'" }
+>>>   { "O1'" "O4'" }
+>>>   { "OA"  "OP1" }
+>>>   { "OB"  "OP2" }
+>>>   { "O1P" "OP1" }
+>>>   { "O2P" "OP2" }
+>>> }
+>>> 
+>>> #
+>>> # assume that most often proteins use HIE
+>>> #
+>>> NHIS = NHIE
+>>> HIS = HIE
+>>> CHIS = CHIE
+>> 
+>> 
+>> # Extra constant pH libraries for Amino Acids
+>> loadOFF constph.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/constph.lib
+Loading: AS2
+Loading: AS4
+Loading: GL4
+>> 
+>> # Extra constant pH libraries for Nucleic Acids
+>> loadOFF all_prot_nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/all_prot_nucleic10.lib
+Loading: A3E
+Loading: A3P
+Loading: A5E
+Loading: A5P
+Loading: AE
+Loading: AP
+Loading: C3E
+Loading: C3P
+Loading: C5E
+Loading: C5P
+Loading: CE
+Loading: CP
+Loading: D3A
+Loading: D3AE
+Loading: D3C
+Loading: D3CE
+Loading: D3G
+Loading: D3GE
+Loading: D3T
+Loading: D3TE
+Loading: D5A
+Loading: D5AE
+Loading: D5C
+Loading: D5CE
+Loading: D5G
+Loading: D5GE
+Loading: D5T
+Loading: D5TE
+Loading: DAE
+Loading: DAP
+Loading: DCE
+Loading: DCP
+Loading: DGD
+Loading: DGE
+Loading: DTD
+Loading: DTE
+Loading: G3D
+Loading: G3E
+Loading: G5D
+Loading: G5E
+Loading: GD
+Loading: GE
+Loading: U3D
+Loading: U3E
+Loading: U5D
+Loading: U5E
+Loading: UD
+Loading: UE
+>> loadOFF cph_nucleic_caps.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/cph_nucleic_caps.lib
+Loading: CH3
+Loading: MOC
+>> 
+>> # Necessary constant pH force field modifications
+>> loadAmberParams frcmod.constph
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.constph
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifcations for titrations
+>> loadAmberParams frcmod.protonated_nucleic
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.protonated_nucleic
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifications for protonated nucleic acids
+(UNKNOWN ATOM TYPE: NX)
+(UNKNOWN ATOM TYPE: OX)
+(UNKNOWN ATOM TYPE: HD)
+>> 
+>> # PBRadii must be mbondi2, corresponding to the proper reference energies
+>> set default PBRadii mbondi2
+Using H(N)-modified Bondi radii
+> 
+> prot = loadPDB R206H.fixed.vac.pdb
+Loading PDB file: ./R206H.fixed.vac.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue THR, term: Terminal/beginning, seq. number: 0 to: NTHR.
+Mapped residue GLY, term: Terminal/beginning, seq. number: 328 to: NGLY.
+Created a new atom named: OXT within residue: .R<AS4 328>
+Created a new atom named: OXT within residue: .R<GL4 435>
+  total atoms in file: 3440
+  Leap added 3635 missing atoms according to residue templates:
+       3635 H / lone pairs
+  The file contained 2 atoms not in residue templates
+> 
+> saveAmberParm prot R206H_titratable.parm7 R206H_titratable.rst7
+Checking Unit.
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (16.000000) is not zero.
+FATAL:  Atom .R<AS4 328>.A<OXT 21> does not have a type.
+FATAL:  Atom .R<GL4 435>.A<OXT 20> does not have a type.
+
+/cm/shared/apps/amber18/bin/teLeap: Fatal Error!
+Failed to generate parameters
+
+Exiting LEaP: Errors = 1; Warnings = 1; Notes = 0.
+log started: Tue Sep  3 16:32:38 2019
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the ff10 force field
+>>> # ----- NOTE: this is designed for PDB format 3!
+>>> #       ff10 =  ff99SB for proteins; ff99bsc0 for DNA; ff99sbsc_chiOL3 for RNA
+>>> #       phosphoaa parms from N. Homeyer, A.H.C. Horn, H. Lanig, H. Sticht
+>>> #           J. Mol. Model. 2006, 12, 281-289.  OP vdW parameters modified
+>>> #           by T. Steinbrecher and J. Latzer.
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "H"   "H" "sp3" }
+>>> 	{ "HO"  "H" "sp3" }
+>>> 	{ "HS"  "H" "sp3" }
+>>> 	{ "H1"  "H" "sp3" }
+>>> 	{ "H2"  "H" "sp3" }
+>>> 	{ "H3"  "H" "sp3" }
+>>> 	{ "H4"  "H" "sp3" }
+>>> 	{ "H5"  "H" "sp3" }
+>>> 	{ "HW"  "H" "sp3" }
+>>> 	{ "HC"  "H" "sp3" }
+>>> 	{ "HA"  "H" "sp3" }
+>>> 	{ "HP"  "H" "sp3" }
+>>> 	{ "HZ"  "H" "sp3" }
+>>> 	{ "OH"  "O" "sp3" }
+>>> 	{ "OS"  "O" "sp3" }
+>>> 	{ "O"   "O" "sp2" }
+>>> 	{ "O2"  "O" "sp2" }
+>>> 	{ "OP"  "O" "sp2" }
+>>> 	{ "OW"  "O" "sp3" }
+>>> 	{ "CT"  "C" "sp3" }
+>>> 	{ "CX"  "C" "sp3" }
+>>> 	{ "CH"  "C" "sp3" }
+>>> 	{ "CS"  "C" "sp2" }
+>>> 	{ "C"   "C" "sp2" }
+>>> 	{ "C*"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CB"  "C" "sp2" }
+>>> 	{ "CC"  "C" "sp2" }
+>>> 	{ "CN"  "C" "sp2" }
+>>> 	{ "CM"  "C" "sp2" }
+>>> 	{ "CK"  "C" "sp2" }
+>>> 	{ "CQ"  "C" "sp2" }
+>>> 	{ "CD"  "C" "sp2" }
+>>> 	{ "C5"  "C" "sp2" }
+>>> 	{ "C4"  "C" "sp2" }
+>>> 	{ "CP"  "C" "sp2" }
+>>> 	{ "CI"  "C" "sp3" }
+>>> 	{ "CJ"  "C" "sp2" }
+>>> 	{ "CW"  "C" "sp2" }
+>>> 	{ "CV"  "C" "sp2" }
+>>> 	{ "CR"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CY"  "C" "sp2" }
+>>> 	{ "C0"  "Ca" "sp2" }
+>>> 	{ "MG"  "Mg" "sp3" }
+>>> 	{ "N"   "N" "sp2" }
+>>> 	{ "NA"  "N" "sp2" }
+>>> 	{ "N2"  "N" "sp2" }
+>>> 	{ "N*"  "N" "sp2" }
+>>> 	{ "NP"  "N" "sp2" }
+>>> 	{ "NQ"  "N" "sp2" }
+>>> 	{ "NB"  "N" "sp2" }
+>>> 	{ "NC"  "N" "sp2" }
+>>> 	{ "NT"  "N" "sp3" }
+>>> 	{ "NY"  "N" "sp2" }
+>>> 	{ "N3"  "N" "sp3" }
+>>> 	{ "S"   "S" "sp3" }
+>>> 	{ "SH"  "S" "sp3" }
+>>> 	{ "P"   "P" "sp3" }
+>>> 	{ "LP"  ""  "sp3" }
+>>> 	{ "EP"  ""  "sp3" }
+>>> 	{ "F"   "F" "sp3" }
+>>> 	{ "Cl"  "Cl" "sp3" }
+>>> 	{ "Br"  "Br" "sp3" }
+>>> 	{ "I"   "I"  "sp3" }
+>>> 	{ "F-"   "F" "sp3" }
+>>> 	{ "Cl-"  "Cl" "sp3" }
+>>> 	{ "Br-"  "Br" "sp3" }
+>>> 	{ "I-"   "I"  "sp3" }
+>>> 	{ "Li+"  "Li"  "sp3" }
+>>> 	{ "Na+"  "Na"  "sp3" }
+>>> 	{ "K+"  "K"  "sp3" }
+>>> 	{ "Rb+"  "Rb"  "sp3" }
+>>> 	{ "Cs+"  "Cs"  "sp3" }
+>>> 	{ "Mg+"  "Mg"  "sp3" }
+>>> # glycam
+>>> 	{ "OG"  "O" "sp3" }
+>>> 	{ "OL"  "O" "sp3" }
+>>> 	{ "AC"  "C" "sp3" }
+>>> 	{ "EC"  "C" "sp3" }
+>>> }
+>>> #
+>>> #	Load the main parameter set.
+>>> #
+>>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>>> #
+>>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>>> #
+>>> loadOff amino10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/amino10.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>>> loadOff aminoct10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminoct10.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>>> loadOff aminont10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminont10.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>>> loadOff oldff/phosphoaa10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/oldff/phosphoaa10.lib
+Loading: H2D
+Loading: PTR
+Loading: S1P
+Loading: SEP
+Loading: T1P
+Loading: TPO
+Loading: Y1P
+>>> loadOff nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/nucleic10.lib
+Loading: A
+Loading: A3
+Loading: A5
+Loading: AN
+Loading: C
+Loading: C3
+Loading: C5
+Loading: CN
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: G
+Loading: G3
+Loading: G5
+Loading: GN
+Loading: OHE
+Loading: U
+Loading: U3
+Loading: U5
+Loading: UN
+>>> #
+>>> #       Load water and ions
+>>> # 
+>>> loadOff atomic_ions.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>>> loadOff solvents.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>>> HOH = TP3
+>>> WAT = TP3
+>>> 
+>>> #
+>>> #	Define the PDB name map for the amino acids and nucleic acids
+>>> #
+>>> addPdbResMap {
+>>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>>>   { 0 "G" "G5"  } { 1 "G" "G3"  } 
+>>>   { 0 "A" "A5"  } { 1 "A" "A3"  } 
+>>>   { 0 "C" "C5"  } { 1 "C" "C3"  } 
+>>>   { 0 "U" "U5"  } { 1 "U" "U3"  } 
+>>>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>>>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>>>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>>>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }  
+>>> #  some old Amber residue names for RNA:
+>>>   { 0  "RA5" "A5" } { 1 "RA3" "A3"} {"RA" "A" }
+>>>   { 0  "RC5" "C5" } { 1 "RC3" "C3"} {"RC" "C" }
+>>>   { 0  "RG5" "G5" } { 1 "RG3" "G3"} {"RG" "G" }
+>>>   { 0  "RU5" "U5" } { 1 "RU3" "U3"} {"RU" "U" }
+>>> #  some really old Amber residue names, assuming DNA:
+>>>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>>>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>>>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>>>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>>> #  uncomment out the following if you have this old style RNA files:
+>>> # { 0 "GUA" "G5"  } { 1 "GUA" "G3"  } { "GUA" "G" }
+>>> # { 0 "ADE" "A5"  } { 1 "ADE" "A3"  } { "ADE" "A" }
+>>> # { 0 "CYT" "C5"  } { 1 "CYT" "C3"  } { "CYT" "C" }
+>>> # { 0 "THY" "T5"  } { 1 "THY" "T3"  } { "THY" "T" }
+>>> 
+>>> }
+>>> 
+>>> #  try to be good about reading in really old atom names as well:
+>>> addPdbAtomMap {
+>>>   { "O5*" "O5'" }
+>>>   { "C5*" "C5'" }
+>>>   { "C4*" "C4'" }
+>>>   { "O4*" "O4'" }
+>>>   { "C3*" "C3'" }
+>>>   { "O3*" "O3'" }
+>>>   { "C2*" "C2'" }
+>>>   { "O2*" "O2'" }
+>>>   { "C1*" "C1'" }
+>>>   { "C5M" "C7"  }
+>>>   { "H1*" "H1'" }
+>>>   { "H2*1" "H2'" }
+>>>   { "H2*2" "H2''" }
+>>>   { "H2'1" "H2'" }
+>>>   { "H2'2" "H2''" }
+>>>   { "H3*" "H3'" }
+>>>   { "H4*" "H4'" }
+>>>   { "H5*1" "H5'" }
+>>>   { "H5*2" "H5''" }
+>>>   { "H5'1" "H5'" }
+>>>   { "H5'2" "H5''" }
+>>>   { "HO'2" "HO2'" }
+>>>   { "H5T"  "HO5'" }
+>>>   { "H3T"  "HO3'" }
+>>>   { "O1'" "O4'" }
+>>>   { "OA"  "OP1" }
+>>>   { "OB"  "OP2" }
+>>>   { "O1P" "OP1" }
+>>>   { "O2P" "OP2" }
+>>> }
+>>> 
+>>> #
+>>> # assume that most often proteins use HIE
+>>> #
+>>> NHIS = NHIE
+>>> HIS = HIE
+>>> CHIS = CHIE
+>> 
+>> 
+>> # Extra constant pH libraries for Amino Acids
+>> loadOFF constph.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/constph.lib
+Loading: AS2
+Loading: AS4
+Loading: GL4
+>> 
+>> # Extra constant pH libraries for Nucleic Acids
+>> loadOFF all_prot_nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/all_prot_nucleic10.lib
+Loading: A3E
+Loading: A3P
+Loading: A5E
+Loading: A5P
+Loading: AE
+Loading: AP
+Loading: C3E
+Loading: C3P
+Loading: C5E
+Loading: C5P
+Loading: CE
+Loading: CP
+Loading: D3A
+Loading: D3AE
+Loading: D3C
+Loading: D3CE
+Loading: D3G
+Loading: D3GE
+Loading: D3T
+Loading: D3TE
+Loading: D5A
+Loading: D5AE
+Loading: D5C
+Loading: D5CE
+Loading: D5G
+Loading: D5GE
+Loading: D5T
+Loading: D5TE
+Loading: DAE
+Loading: DAP
+Loading: DCE
+Loading: DCP
+Loading: DGD
+Loading: DGE
+Loading: DTD
+Loading: DTE
+Loading: G3D
+Loading: G3E
+Loading: G5D
+Loading: G5E
+Loading: GD
+Loading: GE
+Loading: U3D
+Loading: U3E
+Loading: U5D
+Loading: U5E
+Loading: UD
+Loading: UE
+>> loadOFF cph_nucleic_caps.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/cph_nucleic_caps.lib
+Loading: CH3
+Loading: MOC
+>> 
+>> # Necessary constant pH force field modifications
+>> loadAmberParams frcmod.constph
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.constph
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifcations for titrations
+>> loadAmberParams frcmod.protonated_nucleic
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.protonated_nucleic
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifications for protonated nucleic acids
+(UNKNOWN ATOM TYPE: NX)
+(UNKNOWN ATOM TYPE: OX)
+(UNKNOWN ATOM TYPE: HD)
+>> 
+>> # PBRadii must be mbondi2, corresponding to the proper reference energies
+>> set default PBRadii mbondi2
+Using H(N)-modified Bondi radii
+> 
+> prot = loadPDB R206H.fixed.vac.pdb
+Loading PDB file: ./R206H.fixed.vac.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue THR, term: Terminal/beginning, seq. number: 0 to: NTHR.
+Mapped residue GLY, term: Terminal/beginning, seq. number: 328 to: NGLY.
+Created a new atom named: OXT within residue: .R<AS4 328>
+  total atoms in file: 3439
+  Leap added 3635 missing atoms according to residue templates:
+       3635 H / lone pairs
+  The file contained 1 atoms not in residue templates
+> 
+> saveAmberParm prot R206H_titratable.parm7 R206H_titratable.rst7
+Checking Unit.
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (16.000000) is not zero.
+FATAL:  Atom .R<AS4 328>.A<OXT 21> does not have a type.
+
+/cm/shared/apps/amber18/bin/teLeap: Fatal Error!
+Failed to generate parameters
+
+Exiting LEaP: Errors = 1; Warnings = 1; Notes = 0.
+log started: Tue Sep  3 16:32:57 2019
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the ff10 force field
+>>> # ----- NOTE: this is designed for PDB format 3!
+>>> #       ff10 =  ff99SB for proteins; ff99bsc0 for DNA; ff99sbsc_chiOL3 for RNA
+>>> #       phosphoaa parms from N. Homeyer, A.H.C. Horn, H. Lanig, H. Sticht
+>>> #           J. Mol. Model. 2006, 12, 281-289.  OP vdW parameters modified
+>>> #           by T. Steinbrecher and J. Latzer.
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "H"   "H" "sp3" }
+>>> 	{ "HO"  "H" "sp3" }
+>>> 	{ "HS"  "H" "sp3" }
+>>> 	{ "H1"  "H" "sp3" }
+>>> 	{ "H2"  "H" "sp3" }
+>>> 	{ "H3"  "H" "sp3" }
+>>> 	{ "H4"  "H" "sp3" }
+>>> 	{ "H5"  "H" "sp3" }
+>>> 	{ "HW"  "H" "sp3" }
+>>> 	{ "HC"  "H" "sp3" }
+>>> 	{ "HA"  "H" "sp3" }
+>>> 	{ "HP"  "H" "sp3" }
+>>> 	{ "HZ"  "H" "sp3" }
+>>> 	{ "OH"  "O" "sp3" }
+>>> 	{ "OS"  "O" "sp3" }
+>>> 	{ "O"   "O" "sp2" }
+>>> 	{ "O2"  "O" "sp2" }
+>>> 	{ "OP"  "O" "sp2" }
+>>> 	{ "OW"  "O" "sp3" }
+>>> 	{ "CT"  "C" "sp3" }
+>>> 	{ "CX"  "C" "sp3" }
+>>> 	{ "CH"  "C" "sp3" }
+>>> 	{ "CS"  "C" "sp2" }
+>>> 	{ "C"   "C" "sp2" }
+>>> 	{ "C*"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CB"  "C" "sp2" }
+>>> 	{ "CC"  "C" "sp2" }
+>>> 	{ "CN"  "C" "sp2" }
+>>> 	{ "CM"  "C" "sp2" }
+>>> 	{ "CK"  "C" "sp2" }
+>>> 	{ "CQ"  "C" "sp2" }
+>>> 	{ "CD"  "C" "sp2" }
+>>> 	{ "C5"  "C" "sp2" }
+>>> 	{ "C4"  "C" "sp2" }
+>>> 	{ "CP"  "C" "sp2" }
+>>> 	{ "CI"  "C" "sp3" }
+>>> 	{ "CJ"  "C" "sp2" }
+>>> 	{ "CW"  "C" "sp2" }
+>>> 	{ "CV"  "C" "sp2" }
+>>> 	{ "CR"  "C" "sp2" }
+>>> 	{ "CA"  "C" "sp2" }
+>>> 	{ "CY"  "C" "sp2" }
+>>> 	{ "C0"  "Ca" "sp2" }
+>>> 	{ "MG"  "Mg" "sp3" }
+>>> 	{ "N"   "N" "sp2" }
+>>> 	{ "NA"  "N" "sp2" }
+>>> 	{ "N2"  "N" "sp2" }
+>>> 	{ "N*"  "N" "sp2" }
+>>> 	{ "NP"  "N" "sp2" }
+>>> 	{ "NQ"  "N" "sp2" }
+>>> 	{ "NB"  "N" "sp2" }
+>>> 	{ "NC"  "N" "sp2" }
+>>> 	{ "NT"  "N" "sp3" }
+>>> 	{ "NY"  "N" "sp2" }
+>>> 	{ "N3"  "N" "sp3" }
+>>> 	{ "S"   "S" "sp3" }
+>>> 	{ "SH"  "S" "sp3" }
+>>> 	{ "P"   "P" "sp3" }
+>>> 	{ "LP"  ""  "sp3" }
+>>> 	{ "EP"  ""  "sp3" }
+>>> 	{ "F"   "F" "sp3" }
+>>> 	{ "Cl"  "Cl" "sp3" }
+>>> 	{ "Br"  "Br" "sp3" }
+>>> 	{ "I"   "I"  "sp3" }
+>>> 	{ "F-"   "F" "sp3" }
+>>> 	{ "Cl-"  "Cl" "sp3" }
+>>> 	{ "Br-"  "Br" "sp3" }
+>>> 	{ "I-"   "I"  "sp3" }
+>>> 	{ "Li+"  "Li"  "sp3" }
+>>> 	{ "Na+"  "Na"  "sp3" }
+>>> 	{ "K+"  "K"  "sp3" }
+>>> 	{ "Rb+"  "Rb"  "sp3" }
+>>> 	{ "Cs+"  "Cs"  "sp3" }
+>>> 	{ "Mg+"  "Mg"  "sp3" }
+>>> # glycam
+>>> 	{ "OG"  "O" "sp3" }
+>>> 	{ "OL"  "O" "sp3" }
+>>> 	{ "AC"  "C" "sp3" }
+>>> 	{ "EC"  "C" "sp3" }
+>>> }
+>>> #
+>>> #	Load the main parameter set.
+>>> #
+>>> parm10 = loadamberparams parm10.dat
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+(UNKNOWN ATOM TYPE: Zn)
+(UNKNOWN ATOM TYPE: EP)
+>>> #
+>>> #	Load main chain and terminating amino acid libraries, nucleic acids
+>>> #
+>>> loadOff amino10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/amino10.lib
+Loading: ALA
+Loading: ARG
+Loading: ASH
+Loading: ASN
+Loading: ASP
+Loading: CYM
+Loading: CYS
+Loading: CYX
+Loading: GLH
+Loading: GLN
+Loading: GLU
+Loading: GLY
+Loading: HID
+Loading: HIE
+Loading: HIP
+Loading: HYP
+Loading: ILE
+Loading: LEU
+Loading: LYN
+Loading: LYS
+Loading: MET
+Loading: PHE
+Loading: PRO
+Loading: SER
+Loading: THR
+Loading: TRP
+Loading: TYR
+Loading: VAL
+>>> loadOff aminoct10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminoct10.lib
+Loading: CALA
+Loading: CARG
+Loading: CASN
+Loading: CASP
+Loading: CCYS
+Loading: CCYX
+Loading: CGLN
+Loading: CGLU
+Loading: CGLY
+Loading: CHID
+Loading: CHIE
+Loading: CHIP
+Loading: CILE
+Loading: CLEU
+Loading: CLYS
+Loading: CMET
+Loading: CPHE
+Loading: CPRO
+Loading: CSER
+Loading: CTHR
+Loading: CTRP
+Loading: CTYR
+Loading: CVAL
+Loading: NHE
+Loading: NME
+>>> loadOff aminont10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/aminont10.lib
+Loading: ACE
+Loading: NALA
+Loading: NARG
+Loading: NASN
+Loading: NASP
+Loading: NCYS
+Loading: NCYX
+Loading: NGLN
+Loading: NGLU
+Loading: NGLY
+Loading: NHID
+Loading: NHIE
+Loading: NHIP
+Loading: NILE
+Loading: NLEU
+Loading: NLYS
+Loading: NMET
+Loading: NPHE
+Loading: NPRO
+Loading: NSER
+Loading: NTHR
+Loading: NTRP
+Loading: NTYR
+Loading: NVAL
+>>> loadOff oldff/phosphoaa10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/oldff/phosphoaa10.lib
+Loading: H2D
+Loading: PTR
+Loading: S1P
+Loading: SEP
+Loading: T1P
+Loading: TPO
+Loading: Y1P
+>>> loadOff nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/nucleic10.lib
+Loading: A
+Loading: A3
+Loading: A5
+Loading: AN
+Loading: C
+Loading: C3
+Loading: C5
+Loading: CN
+Loading: DA
+Loading: DA3
+Loading: DA5
+Loading: DAN
+Loading: DC
+Loading: DC3
+Loading: DC5
+Loading: DCN
+Loading: DG
+Loading: DG3
+Loading: DG5
+Loading: DGN
+Loading: DT
+Loading: DT3
+Loading: DT5
+Loading: DTN
+Loading: G
+Loading: G3
+Loading: G5
+Loading: GN
+Loading: OHE
+Loading: U
+Loading: U3
+Loading: U5
+Loading: UN
+>>> #
+>>> #       Load water and ions
+>>> # 
+>>> loadOff atomic_ions.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/atomic_ions.lib
+Loading: AG
+Loading: AL
+Loading: Ag
+Loading: BA
+Loading: BR
+Loading: Be
+Loading: CA
+Loading: CD
+Loading: CE
+Loading: CL
+Loading: CO
+Loading: CR
+Loading: CS
+Loading: CU
+Loading: CU1
+Loading: Ce
+Loading: Cl-
+Loading: Cr
+Loading: Dy
+Loading: EU
+Loading: EU3
+Loading: Er
+Loading: F
+Loading: FE
+Loading: FE2
+Loading: GD3
+Loading: H3O+
+Loading: HE+
+Loading: HG
+Loading: HZ+
+Loading: Hf
+Loading: IN
+Loading: IOD
+Loading: K
+Loading: K+
+Loading: LA
+Loading: LI
+Loading: LU
+Loading: MG
+Loading: MN
+Loading: NA
+Loading: NH4
+Loading: NI
+Loading: Na+
+Loading: Nd
+Loading: PB
+Loading: PD
+Loading: PR
+Loading: PT
+Loading: Pu
+Loading: RB
+Loading: Ra
+Loading: SM
+Loading: SR
+Loading: Sm
+Loading: Sn
+Loading: TB
+Loading: TL
+Loading: Th
+Loading: Tl
+Loading: Tm
+Loading: U4+
+Loading: V2+
+Loading: Y
+Loading: YB2
+Loading: ZN
+Loading: Zr
+>>> loadOff solvents.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/solvents.lib
+Loading: CHCL3BOX
+Loading: DC4
+Loading: FB3
+Loading: FB3BOX
+Loading: FB4
+Loading: FB4BOX
+Loading: MEOHBOX
+Loading: NMABOX
+Loading: OP3
+Loading: OPC
+Loading: OPC3BOX
+Loading: OPCBOX
+Loading: PL3
+Loading: POL3BOX
+Loading: QSPCFWBOX
+Loading: SPC
+Loading: SPCBOX
+Loading: SPCFWBOX
+Loading: SPF
+Loading: SPG
+Loading: T4E
+Loading: TIP3PBOX
+Loading: TIP3PFBOX
+Loading: TIP4PBOX
+Loading: TIP4PEWBOX
+Loading: TIP5PBOX
+Loading: TP3
+Loading: TP4
+Loading: TP5
+Loading: TPF
+>>> HOH = TP3
+>>> WAT = TP3
+>>> 
+>>> #
+>>> #	Define the PDB name map for the amino acids and nucleic acids
+>>> #
+>>> addPdbResMap {
+>>>   { 0 "ALA" "NALA" } { 1 "ALA" "CALA" }
+>>>   { 0 "ARG" "NARG" } { 1 "ARG" "CARG" }
+>>>   { 0 "ASN" "NASN" } { 1 "ASN" "CASN" }
+>>>   { 0 "ASP" "NASP" } { 1 "ASP" "CASP" }
+>>>   { 0 "CYS" "NCYS" } { 1 "CYS" "CCYS" }
+>>>   { 0 "CYX" "NCYX" } { 1 "CYX" "CCYX" }
+>>>   { 0 "GLN" "NGLN" } { 1 "GLN" "CGLN" }
+>>>   { 0 "GLU" "NGLU" } { 1 "GLU" "CGLU" }
+>>>   { 0 "GLY" "NGLY" } { 1 "GLY" "CGLY" }
+>>>   { 0 "HID" "NHID" } { 1 "HID" "CHID" }
+>>>   { 0 "HIE" "NHIE" } { 1 "HIE" "CHIE" }
+>>>   { 0 "HIP" "NHIP" } { 1 "HIP" "CHIP" }
+>>>   { 0 "ILE" "NILE" } { 1 "ILE" "CILE" }
+>>>   { 0 "LEU" "NLEU" } { 1 "LEU" "CLEU" }
+>>>   { 0 "LYS" "NLYS" } { 1 "LYS" "CLYS" }
+>>>   { 0 "MET" "NMET" } { 1 "MET" "CMET" }
+>>>   { 0 "PHE" "NPHE" } { 1 "PHE" "CPHE" }
+>>>   { 0 "PRO" "NPRO" } { 1 "PRO" "CPRO" }
+>>>   { 0 "SER" "NSER" } { 1 "SER" "CSER" }
+>>>   { 0 "THR" "NTHR" } { 1 "THR" "CTHR" }
+>>>   { 0 "TRP" "NTRP" } { 1 "TRP" "CTRP" }
+>>>   { 0 "TYR" "NTYR" } { 1 "TYR" "CTYR" }
+>>>   { 0 "VAL" "NVAL" } { 1 "VAL" "CVAL" }
+>>>   { 0 "HIS" "NHIS" } { 1 "HIS" "CHIS" }
+>>>   { 0 "G" "G5"  } { 1 "G" "G3"  } 
+>>>   { 0 "A" "A5"  } { 1 "A" "A3"  } 
+>>>   { 0 "C" "C5"  } { 1 "C" "C3"  } 
+>>>   { 0 "U" "U5"  } { 1 "U" "U3"  } 
+>>>   { 0 "DG" "DG5"  } { 1 "DG" "DG3"  }  
+>>>   { 0 "DA" "DA5"  } { 1 "DA" "DA3"  }  
+>>>   { 0 "DC" "DC5"  } { 1 "DC" "DC3"  }  
+>>>   { 0 "DT" "DT5"  } { 1 "DT" "DT3"  }  
+>>> #  some old Amber residue names for RNA:
+>>>   { 0  "RA5" "A5" } { 1 "RA3" "A3"} {"RA" "A" }
+>>>   { 0  "RC5" "C5" } { 1 "RC3" "C3"} {"RC" "C" }
+>>>   { 0  "RG5" "G5" } { 1 "RG3" "G3"} {"RG" "G" }
+>>>   { 0  "RU5" "U5" } { 1 "RU3" "U3"} {"RU" "U" }
+>>> #  some really old Amber residue names, assuming DNA:
+>>>   { 0 "GUA" "DG5"  } { 1 "GUA" "DG3"  } { "GUA" "DG" }
+>>>   { 0 "ADE" "DA5"  } { 1 "ADE" "DA3"  } { "ADE" "DA" }
+>>>   { 0 "CYT" "DC5"  } { 1 "CYT" "DC3"  } { "CYT" "DC" }
+>>>   { 0 "THY" "DT5"  } { 1 "THY" "DT3"  } { "THY" "DT" }
+>>> #  uncomment out the following if you have this old style RNA files:
+>>> # { 0 "GUA" "G5"  } { 1 "GUA" "G3"  } { "GUA" "G" }
+>>> # { 0 "ADE" "A5"  } { 1 "ADE" "A3"  } { "ADE" "A" }
+>>> # { 0 "CYT" "C5"  } { 1 "CYT" "C3"  } { "CYT" "C" }
+>>> # { 0 "THY" "T5"  } { 1 "THY" "T3"  } { "THY" "T" }
+>>> 
+>>> }
+>>> 
+>>> #  try to be good about reading in really old atom names as well:
+>>> addPdbAtomMap {
+>>>   { "O5*" "O5'" }
+>>>   { "C5*" "C5'" }
+>>>   { "C4*" "C4'" }
+>>>   { "O4*" "O4'" }
+>>>   { "C3*" "C3'" }
+>>>   { "O3*" "O3'" }
+>>>   { "C2*" "C2'" }
+>>>   { "O2*" "O2'" }
+>>>   { "C1*" "C1'" }
+>>>   { "C5M" "C7"  }
+>>>   { "H1*" "H1'" }
+>>>   { "H2*1" "H2'" }
+>>>   { "H2*2" "H2''" }
+>>>   { "H2'1" "H2'" }
+>>>   { "H2'2" "H2''" }
+>>>   { "H3*" "H3'" }
+>>>   { "H4*" "H4'" }
+>>>   { "H5*1" "H5'" }
+>>>   { "H5*2" "H5''" }
+>>>   { "H5'1" "H5'" }
+>>>   { "H5'2" "H5''" }
+>>>   { "HO'2" "HO2'" }
+>>>   { "H5T"  "HO5'" }
+>>>   { "H3T"  "HO3'" }
+>>>   { "O1'" "O4'" }
+>>>   { "OA"  "OP1" }
+>>>   { "OB"  "OP2" }
+>>>   { "O1P" "OP1" }
+>>>   { "O2P" "OP2" }
+>>> }
+>>> 
+>>> #
+>>> # assume that most often proteins use HIE
+>>> #
+>>> NHIS = NHIE
+>>> HIS = HIE
+>>> CHIS = CHIE
+>> 
+>> 
+>> # Extra constant pH libraries for Amino Acids
+>> loadOFF constph.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/constph.lib
+Loading: AS2
+Loading: AS4
+Loading: GL4
+>> 
+>> # Extra constant pH libraries for Nucleic Acids
+>> loadOFF all_prot_nucleic10.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/all_prot_nucleic10.lib
+Loading: A3E
+Loading: A3P
+Loading: A5E
+Loading: A5P
+Loading: AE
+Loading: AP
+Loading: C3E
+Loading: C3P
+Loading: C5E
+Loading: C5P
+Loading: CE
+Loading: CP
+Loading: D3A
+Loading: D3AE
+Loading: D3C
+Loading: D3CE
+Loading: D3G
+Loading: D3GE
+Loading: D3T
+Loading: D3TE
+Loading: D5A
+Loading: D5AE
+Loading: D5C
+Loading: D5CE
+Loading: D5G
+Loading: D5GE
+Loading: D5T
+Loading: D5TE
+Loading: DAE
+Loading: DAP
+Loading: DCE
+Loading: DCP
+Loading: DGD
+Loading: DGE
+Loading: DTD
+Loading: DTE
+Loading: G3D
+Loading: G3E
+Loading: G5D
+Loading: G5E
+Loading: GD
+Loading: GE
+Loading: U3D
+Loading: U3E
+Loading: U5D
+Loading: U5E
+Loading: UD
+Loading: UE
+>> loadOFF cph_nucleic_caps.lib
+Loading library: /cm/shared/apps/amber18/dat/leap/lib/cph_nucleic_caps.lib
+Loading: CH3
+Loading: MOC
+>> 
+>> # Necessary constant pH force field modifications
+>> loadAmberParams frcmod.constph
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.constph
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifcations for titrations
+>> loadAmberParams frcmod.protonated_nucleic
+Loading parameters: /cm/shared/apps/amber18/dat/leap/parm/frcmod.protonated_nucleic
+Reading force field modification type file (frcmod)
+Reading title:
+Force field modifications for protonated nucleic acids
+(UNKNOWN ATOM TYPE: NX)
+(UNKNOWN ATOM TYPE: OX)
+(UNKNOWN ATOM TYPE: HD)
+>> 
+>> # PBRadii must be mbondi2, corresponding to the proper reference energies
+>> set default PBRadii mbondi2
+Using H(N)-modified Bondi radii
+> 
+> prot = loadPDB R206H.fixed.vac.pdb
+Loading PDB file: ./R206H.fixed.vac.pdb
+Matching PDB residue names to LEaP variables.
+Mapped residue THR, term: Terminal/beginning, seq. number: 0 to: NTHR.
+Mapped residue GLY, term: Terminal/beginning, seq. number: 328 to: NGLY.
+  total atoms in file: 3438
+  Leap added 3635 missing atoms according to residue templates:
+       3635 H / lone pairs
+> 
+> saveAmberParm prot R206H_titratable.parm7 R206H_titratable.rst7
+Checking Unit.
+
+/cm/shared/apps/amber18/bin/teLeap: Warning!
+The unperturbed charge of the unit (16.000000) is not zero.
+
+/cm/shared/apps/amber18/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ ** Warning: No sp2 improper torsion term for  C*-CN-CB-CA
+        atoms are: CG CE2 CD2 CE3
+ ** Warning: No sp2 improper torsion term for  NA-CA-CN-CB
+        atoms are: NE1 CZ2 CE2 CD2
+ total 1475 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	NGLY	1
+	NTHR	1
+  )
+ (no restraints)
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
