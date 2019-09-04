@@ -4,8 +4,8 @@
 #SBATCH --partition=gpus
 #SBATCH --get-user-env
 #SBATCH --nodes=1
-#SBATCH --tasks-per-node=4
-#SBATCH --gres=gpu:4
+#SBATCH --tasks-per-node=1
+#SBATCH --gres=gpu:1
 #SBATCH --time=300:00:00
 
 echo "starting up"

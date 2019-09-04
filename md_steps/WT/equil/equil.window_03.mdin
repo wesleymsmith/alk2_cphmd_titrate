@@ -1,0 +1,33 @@
+Implicit solvent constant pH molecular dynamics window_03 ph=9.0
+ &cntrl
+   imin=0, 			! not minimization
+   irest=1, 		! restart from heating step
+   ntx=5,			! read in velocities and coordinates
+   ntpr=1000, 		! write mdout every 2 ps
+   ntwx=1000, 		! write trajectory every 2 ps
+   nstlim=1000000,	! run for 2M steps (2 ns)
+   dt=0.002, 		! time stepn (ps)
+   ntt=3, 			! Langevin thermostat
+   tempi=300,		! Initial temperature (K)
+   temp0=300, 		! Target temperature (K)
+   tautp=2.0, 		! Langevin thermostat Tau (ps) 
+   ig=-1,			! Use a randomly chosen seed (based on system clock)
+   ntp=0, 			! Constant volume (no barostat)
+   ntc=2, 			! SHAKE for hydrogens only
+   ntf=2, 			! Omit bond interactions for hydrogens
+   cut=999.0,		! non-bond cutoff turned off 
+					! (not supported for GB on pmemd)
+   ntb=0, 			! No periodic boundary (not supported under GB)
+   igb=2, 			! GB model 2 See "Onufriev, A. et. al. Proteins, 
+                    !                    2004, 55, 383-394"
+   saltcon=0.1,		! GB salt concentration (M)
+   nrespa=1, 		! Use same frequency for both slow and fast non-bond terms
+   tol=0.000001, 	! Ewald tolerance
+   icnstph=1,		! Use constant pH module
+   solvph=9.0, 		! solvent pH setting
+   ntcnstph=2,		! attempt switches every ntcnstph time steps
+					! should ensure number titrated residues * dt * ntcnstph <= 100
+   gamma_ln=5.0, 	! Gamma parameter for langevin thermostat (1/ps)
+   ntwr=25000, 		! write restart file every 50 ps
+   ioutfm=1,		! use NETCDF output format
+  /
