@@ -1,0 +1,5 @@
+source leaprc.constph
+prot = loadPDB WT.fixed.vac.pdb
+
+saveAmberParm prot WT_titratable.parm7 WT_titratable.rst7
+quit

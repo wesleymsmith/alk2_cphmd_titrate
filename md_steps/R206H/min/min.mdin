@@ -9,4 +9,7 @@ Minimization to prepare for constant pH MD
    cut = 1000.0,               ! No cutoff
    ntr = 1,                    ! Turn on positional restraints
    restraint_wt = 10,          ! 10 kcal/mol/A**2 restraint force constant
+   restraintmask = '@CA,C,O,N',! Restraints on the backbone atoms only
+   ntpr = 25,
+   ntwr = 100,
 /
