@@ -1,0 +1,45 @@
+Implicit solvent constant pH initial heating mdin
+ &cntrl
+    imin=0,             ! This is not a minimization
+    irest=0,            ! This is not a restart
+    ntx=1,              ! So DO NOT read in velocities
+    ntpr=500,           ! 500 frames (1 ps) between mdout writes
+    ntwx=500,           ! 500 frames (1 ps) between trajectory writes
+    nstlim=1000000,     ! Run for 1 M steps (2 ns)
+    dt=0.002,           ! 2 fs timestep
+    ntt=3,              ! Langevin thermostat
+    tempi=10,           ! Starting temperature = 10 K
+    temp0=315,          ! Target temperature = 300 K
+    tautp=2.0,          ! Langevin thermostat tau = 2.0 ps
+    ig=-1,              ! Pick the number generator seed randomly
+    ntp=0,              ! Constant volume simulation
+    ntc=2,              ! SHAKE for hydrogens only
+    ntf=2,              ! Omit bond interactions for hydrogens
+    cut=999,            ! Non-bond cutoff not supported under GPU implementation
+    ntb=0,              ! No periodic boundary (since this is a GB run)
+    igb=2,              ! GB model 2 - See "Onufriev, A. et. al. Proteins, 
+                        !                    2004, 55, 383-394"
+    tol=0.000001,       ! Ewald tolerance
+    nrespa=1,           ! Evaluate slow varying energy terms at same frequency 
+                        ! as fast terms
+    saltcon=0.1,        ! 0.1 M GB salt concentration
+    icnstph=1,          ! Turn constant pH module on
+    ntcnstph=100000000, ! Do NOT attempt protantation state swaps 
+                        ! (ntcstph > nstlim) 
+    gamma_ln=5.0,       ! Langevin collision frequency (collisions per ps)
+    ntwr=5000,          ! Write restart file every 5000 frames (10 ps)
+    ioutfm=1,           ! Use NETCDF trajectory format
+    nmropt=1,           ! Turn nmr restraints on
+    ntr=1,              ! Use cartesian restraints
+    restraint_wt=2.0,   ! Cartesian restraint weight (kcal per mol Å^2)
+    restraintmask='@CA,C,O,N', ! Restrain backbone atoms
+  /
+ &wt
+    ! varying temperature conditions
+    TYPE='TEMP0',       ! temperature ramping scheme
+    ISTEP1=1,           ! start ramping at frame 1
+    ISTEP2=500000,      ! finish ramping after 500k frames (1 ns)
+    VALUE1=10.0,        ! starting at 10.0 K
+    VALUE2=315.0,       ! ending at 315 K
+  /
+ &wt TYPE='END' /
