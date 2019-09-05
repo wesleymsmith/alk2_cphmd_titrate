@@ -1,0 +1,17 @@
+
+ NSTEP =  1000000   TIME(PS) =    4000.000  TEMP(K) =   302.74  PRESS =     0.0
+ Etot   =     -6366.4962  EKtot   =      5179.4780  EPtot      =    -11545.9742
+ BOND   =      1460.6624  ANGLE   =      3589.8112  DIHED      =      4519.9101
+ 1-4 NB =      1493.1214  1-4 EEL =     16763.0854  VDWAALS    =     -3438.5375
+ EELEC  =    -30779.8023  EGB     =     -5154.2249  RESTRAINT  =         0.0000
+
+|  Final Performance Info:
+|     -----------------------------------------------------
+|     Average timings for last    9000 steps:
+|     Elapsed(s) =      64.62 Per Step(ms) =       7.18
+|         ns/day =      24.07   seconds/ns =    3589.85
+|
+|     Average timings for all steps:
+|     Elapsed(s) =    7184.98 Per Step(ms) =       7.18
+|         ns/day =      24.05   seconds/ns =    3592.49
+|     -----------------------------------------------------
