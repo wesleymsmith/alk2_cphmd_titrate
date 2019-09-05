@@ -1,0 +1,4 @@
+starting up
+/cm/local/apps/slurm/var/spool/job29168/slurm_script: line 21: /home/wesley/amber18/amber.sh: No such file or directory
+running equilibration
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
