@@ -1,0 +1,4 @@
+source oldff/leaprc.ff14SB
+loadOFF phmd.lib
+loadAmberParams frcmod.phmd
+set default PBRadii mbondi3

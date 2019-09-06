@@ -1,0 +1,9 @@
+source oldff/leaprc.ff14SB
+loadOFF phmd.lib
+loadAmberParams frcmod.phmd
+set default PBRadii mbondi3
+
+prot = loadPDB WT.fixed.vac.pdb
+
+saveAmberParm prot WT.parm7 WT.rst7
+quit
