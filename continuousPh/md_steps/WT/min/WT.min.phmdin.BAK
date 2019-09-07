@@ -1,0 +1,22 @@
+WT minimization phmdin file
+ &phmdin
+   phmdcut = 1000.0,    ! leave as is to be consistent with GPU GB implementation
+   qmass_phmd = 34,     ! virtual paritcle mass (amu), should be roughl as large as the 
+                        ! heaviest atom type in the simulation (S in this case, 
+                        ! due to CYS ... will likely be Cl in all atom sims)
+   temp_phmd = 315,     ! temperature for phmd virtual particles (K)
+   phbeta = 5.0,        ! phmd virtual particle Langevin dynamics beta (ps^-1)
+   iphfrq = 100000000,  ! number of time steps between titration coordinate updates
+						! turned off since this is mimimization
+   qphmdstart = 0,      ! 0 = Do not read in virtual particle velocties
+   nprint_phmd = 10,    ! Printing interval for writting to lambda file (time steps)
+   prlam = .true.,      ! Print lambda values to the lambda file
+   prderiv = .false.,   ! do not print theta and dU/dTheta to output file
+   prnlev = 2,          ! verbosity level (2+ -> full output,
+                        ! 5+ -> include diagnostic data)
+   outu = 6,            ! file unit number for printing diagnostic data
+   phtest = 0,          ! set to 1 if Theta and Theta_x need to be fixed (used for
+                        ! parameterization runs)
+   masktitres(:) = 'AS2','HIS','LYS','CYS', ! Names of residues to titrate
+   masktitrestypes = 4, ! number of different types of residues being titrated
+ /

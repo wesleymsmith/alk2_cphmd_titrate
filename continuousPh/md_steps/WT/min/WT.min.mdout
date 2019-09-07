@@ -1,0 +1,80 @@
+
+          -------------------------------------------------------
+          Amber 18 PMEMD                              2018
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 18
+
+| Run on 09/06/2019 at 17:44:45
+
+|   Executable path: pmemd
+| Working directory: /shared2/work/wesley/alk2_pKa/alk2_cphmd_titrate/continuousPh/md_steps/WT/min
+|          Hostname: node007
+
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: min.mdin                                                              
+|  MDOUT: WT.min.mdout                                                          
+| INPCRD: WT.init.rst7                                                          
+|   PARM: WT.parm7                                                              
+| RESTRT: restrt                                                                
+|   REFC: WT.init.rst7                                                          
+|  MDVEL: mdvel                                                                 
+|   MDEN: mden                                                                  
+|  MDCRD: mdcrd                                                                 
+| MDINFO: WT.min.mdinfo                                                         
+|  MDFRC: mdfrc                                                                 
+
+
+ Here is the input file:
+
+Minimization to prepare for constant pH MD                                     
+&cntrl                                                                         
+   imin = 1,                   ! Turn on minimization                          
+   igb = 2,                    ! Use the GB model CpHMD was parametrized for   
+   saltcon = 0.1,              ! Use the salt conc. CpHMD was parametrized for 
+   maxcyc = 1000,              ! Total number of minimization cycles           
+   iphmd = 1,                  ! Turn continuous ph md on                      
+   cut = 1000.0,               ! No cutoff                                     
+   ntr = 1,                    ! Turn on positional restraints                 
+   restraint_wt = 10,          ! 10 kcal/mol/A**2 restraint force constant     
+   restraintmask = '@CA,C,O,N',! Restraints on the backbone atoms only         
+   ntpr = 25,                                                                  
+   ntwr = 100,                                                                 
+/                                                                              
+
+
+Note: ig = -1. Setting random seed to   435491 based on wallclock time in 
+      microseconds.
+| irandom = 1, using AMBER's internal random number generator (default).
+ 
+| Conditional Compilation Defines Used:
+| PUBFFT
+| BINTRAJ
+| EMIL
+
+| New format PARM file being parsed.
+| Version =    1.000 Date = 09/05/19 Time = 17:39:52
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| INFO:    Reading atomic numbers from topology file.
+| Duplicated    0 dihedrals
+
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+ NATOM  =    6887 NTYPES =      14 NBONH =    3446 MBONA  =    3516
+ NTHETH =    7818 MTHETA =    4764 NPHIH =   15904 MPHIA  =   15106
+ NHPARM =       0 NPARM  =       0 NNB   =   38049 NRES   =     435
+ NBONA  =    3516 NTHETA =    4764 NPHIA =   15106 NUMBND =      65
+ NUMANG =     154 NPTRA  =     197 NATYP =      32 NPHB   =       0
+ IFBOX  =       0 NMXRS  =      24 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+ Implicit solvent radii are ArgH and AspGluO modified Bondi2 radii (mbondi3)                                
