@@ -1,0 +1,7 @@
+Testing phmdin
+&phmdin
+NPrint_PHMD = 250,
+PrLam = .true.,
+MaskTitrRes(:) = 'AS2','GL2','HIP','LYS','CYS',
+MaskTitrResTypes = 4,
+/

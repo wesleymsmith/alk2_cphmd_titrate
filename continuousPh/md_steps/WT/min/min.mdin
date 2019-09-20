@@ -4,7 +4,7 @@ Minimization to prepare for constant pH MD
    igb = 2,                    ! Use the GB model CpHMD was parametrized for
    saltcon = 0.1,              ! Use the salt conc. CpHMD was parametrized for
    maxcyc = 1000,              ! Total number of minimization cycles
-   iphmd = 1,                  ! Turn continuous ph md on
+   !iphmd = 1,                  ! Turn continuous ph md on - not supported for minimization
    cut = 1000.0,               ! No cutoff
    ntr = 1,                    ! Turn on positional restraints
    restraint_wt = 10,          ! 10 kcal/mol/A**2 restraint force constant

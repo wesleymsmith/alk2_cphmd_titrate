@@ -1,0 +1,13 @@
+# Log started on 09/05/2019 [mm/dd/yyyy] at 18:24:52
+help
+quit
+# Log started on 09/05/2019 [mm/dd/yyyy] at 18:25:08
+# Command line arguments: WT.parm7
+# Loaded topologies: WT.parm7
+help
+help printDetails
+printDetails :AS2
+printDetails :ASP
+printDetails :AS2
+printDetails :428
+quit

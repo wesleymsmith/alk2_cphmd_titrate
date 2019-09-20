@@ -3,7 +3,7 @@ loadOFF phmd.lib
 loadAmberParams frcmod.phmd
 set default PBRadii mbondi3
 
-prot = loadPDB WT.fixed.vac.pdb
+prot = loadPDB WT.cphmd_leap_in.pdb
 
 saveAmberParm prot WT.parm7 WT.rst7
 quit
