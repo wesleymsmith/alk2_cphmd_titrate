@@ -1,4 +1,4 @@
-rep19.in md input file, ph = 11.474
+WT.rep12.in md input file, ph = 7.789
 &cntrl
     imin = 0
     irest = 0
@@ -22,7 +22,7 @@ rep19.in md input file, ph = 11.474
     nrespa = 1
     iphmd = 1
     gamma_ln = 1.0
-    solvph = 11.4736842105
+    solvph = 7.78947368421
     ntwr = 1000000
     ioutfm = 1
 /
