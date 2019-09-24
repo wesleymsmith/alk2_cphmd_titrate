@@ -1,0 +1,9 @@
+source oldff/leaprc.ff14SB
+loadOFF phmd.lib
+loadAmberParams frcmod.phmd
+set default PBRadii mbondi3
+
+prot = loadPDB R206H.cphmd_leap_in.pdb
+
+saveAmberParm prot R206H.parm7 R206H.rst7
+quit
