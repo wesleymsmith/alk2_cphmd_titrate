@@ -2,3 +2,4 @@ starting up
 running step 00 for R206H.rep20
 Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
 running step 01
+slurmstepd: *** JOB 29503 ON node005 CANCELLED AT 2019-09-24T17:14:26 ***
