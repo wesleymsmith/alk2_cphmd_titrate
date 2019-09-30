@@ -1,0 +1,40 @@
+starting up
+loading AMBER and environment variables
+
+ Running multipmemd version of pmemd Amber18
+    Total processors =    20
+    Number of groups =    20
+
+At line 720 of file mdin_ctrl_dat.F90 (unit = 5, file = 'R206H.rep11.in')
+Fortran runtime error: Cannot match namelist object name nexchg
+At line 720 of file mdin_ctrl_dat.F90 (unit = 5, file = 'R206H.rep19.in')
+Fortran runtime error: Cannot match namelist object name nexchg
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 18343 RUNNING AT node003
+=   EXIT CODE: 2
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+[proxy:0:0@node001] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:0@node001] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:0@node001] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:4@node005] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:4@node005] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:4@node005] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:3@node004] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:3@node004] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:3@node004] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+[proxy:0:1@node002] HYD_pmcd_pmip_control_cmd_cb (pm/pmiserv/pmip_cb.c:912): assert (!closed) failed
+[proxy:0:1@node002] HYDT_dmxu_poll_wait_for_event (tools/demux/demux_poll.c:76): callback returned error status
+[proxy:0:1@node002] main (pm/pmiserv/pmip.c:206): demux engine error waiting for event
+srun: error: node005: task 4: Exited with exit code 7
+srun: error: node002: task 1: Exited with exit code 7
+srun: error: node004: task 3: Exited with exit code 7
+srun: error: node001: task 0: Exited with exit code 7
+[mpiexec@node001] HYDT_bscu_wait_for_completion (tools/bootstrap/utils/bscu_wait.c:76): one of the processes terminated badly; aborting
+[mpiexec@node001] HYDT_bsci_wait_for_completion (tools/bootstrap/src/bsci_wait.c:23): launcher returned error waiting for completion
+[mpiexec@node001] HYD_pmci_wait_for_completion (pm/pmiserv/pmiserv_pmci.c:218): launcher returned error waiting for completion
+[mpiexec@node001] main (ui/mpich/mpiexec.c:344): process manager error waiting for completion
+done

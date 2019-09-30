@@ -1,0 +1,63 @@
+
+          -------------------------------------------------------
+          Amber 18 PMEMD                              2018
+          -------------------------------------------------------
+
+| PMEMD implementation of SANDER, Release 18
+
+| Run on 09/30/2019 at 14:15:16
+
+|   Executable path: pmemd.cuda.MPI
+| Working directory: /shared2/work/wesley/alk2_pKa/alk2_cphmd_titrate/continuousPh/md_steps/R206H/titrate_remd
+|          Hostname: node001
+
+  [-O]verwriting output
+
+File Assignments:
+|   MDIN: R206H.rep06.in                                                        
+|  MDOUT: rep06.00.mdout                                                        
+| INPCRD: R206H.min.rst7                                                        
+|   PARM: R206H.parm7                                                           
+| RESTRT: rep06.00.rst                                                          
+|   REFC: refc                                                                  
+|  MDVEL: mdvel.005                                                             
+|   MDEN: mden.005                                                              
+|  MDCRD: rep06.00.nc                                                           
+| MDINFO: rep06.00.mdinfo                                                       
+|LOGFILE: rep06.00.logfile                                                      
+|  MDFRC: mdfrc.005                                                             
+
+
+ Here is the input file:
+
+R206H.rep06.in md input file, ph = 4.632                                       
+&cntrl                                                                         
+    imin = 0                                                                   
+    irest = 0                                                                  
+    ntx = 1                                                                    
+    ntpr = 1000                                                                
+    ntwx = 1000                                                                
+    nexchg = 200                                                               
+    nstlim = 5000                                                              
+    dt = 0.002                                                                 
+    ntt = 3                                                                    
+    tempi = 300                                                                
+    temp0 = 300                                                                
+    tautp = 2.0                                                                
+    ig = -1                                                                    
+    ntp = 0                                                                    
+    ntc = 2                                                                    
+    ntf = 2                                                                    
+    cut = 999                                                                  
+    ntb = 0                                                                    
+    igb = 8                                                                    
+    saltcon = 0.15                                                             
+    nrespa = 1                                                                 
+    iphmd = 1                                                                  
+    gamma_ln = 1.0                                                             
+    solvph = 4.63157894737                                                     
+    ntwr = 250000                                                              
+    ioutfm = 1                                                                 
+/                                                                              
+
+
