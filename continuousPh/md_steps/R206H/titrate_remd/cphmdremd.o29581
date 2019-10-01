@@ -1,0 +1,8 @@
+starting up
+found 20 pH windows in groupfile
+loading AMBER and environment variables
+
+ Running multipmemd version of pmemd Amber18
+    Total processors =    20
+    Number of groups =    20
+
