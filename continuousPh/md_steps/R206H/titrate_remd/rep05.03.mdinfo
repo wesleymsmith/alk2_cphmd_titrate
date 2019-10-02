@@ -1,0 +1,24 @@
+
+ NSTEP =   994000   TIME(PS) =    1988.000  TEMP(K) =   299.47  PRESS =     0.0
+ Etot   =     -3408.6018  EKtot   =      5173.7642  EPtot      =     -8582.3659
+ BOND   =      1402.9119  ANGLE   =      3701.8183  DIHED      =      6710.3179
+ 1-4 NB =      1482.0021  1-4 EEL =     15604.0169  VDWAALS    =     -3210.0898
+ EELEC  =    -20993.5581  EGB     =    -13279.7852  RESTRAINT  =         0.0000
+ CpHMD   =       858.0261
+ SOLVPH =         3.0526  REPNUM  =              5  EXCHANGE#  =            199
+ ------------------------------------------------------------------------------
+| Current Timing Info
+| -------------------
+| Total steps :   1000000 | Completed :    994000 | Remaining :      6000
+|
+| Average timings for last   10000 steps:
+|     Elapsed(s) =      59.89 Per Step(ms) =       5.99
+|         ns/day =      28.85   seconds/ns =    2994.56
+|
+| Average timings for all steps:
+|     Elapsed(s) =    5962.56 Per Step(ms) =       6.00
+|         ns/day =      28.81   seconds/ns =    2999.28
+|
+|
+| Estimated time remaining:      36.0 seconds.
+ ------------------------------------------------------------------------------
