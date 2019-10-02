@@ -1,0 +1,47 @@
+# 10/02/19 10:18:54
+# R206H.parm7
+# Loaded topologies:
+#   R206H.parm7
+trajin R206H.rst7
+trajout R206H.ascii.rst7
+go
+quit
+trajin rep01.00.nc
+quit
+quit
+# 10/02/19 10:57:57
+# R206H.parm7
+# Loaded topologies:
+#   R206H.parm7
+trajin rep11.00.rst
+trajout rep11.00.ascii.rst
+go
+quit
+# 10/02/19 10:58:58
+# R206H.parm7
+# Loaded topologies:
+#   R206H.parm7
+trajout rep11.00.ascii.rst
+trajout rep11.00.ascii.rst7
+go
+quit
+go
+quit
+# 10/02/19 10:59:15
+# R206H.parm7
+# Loaded topologies:
+#   R206H.parm7
+trajin rep11.00.rst
+quit
+# 10/02/19 11:00:10
+# R206H.parm7
+# Loaded topologies:
+#   R206H.parm7
+trajin rep11.00.rst
+quit
+# 10/02/19 11:00:43
+# R206H.parm7
+# Loaded topologies:
+#   R206H.parm7
+trajin rep11.00.nc
+quit

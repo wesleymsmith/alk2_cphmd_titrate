@@ -1,24 +1,24 @@
 
- NSTEP =   998000   TIME(PS) =    1996.000  TEMP(K) =*********  PRESS =     0.0
- Etot   = **************  EKtot   = **************  EPtot      = **************
- BOND   = **************  ANGLE   =   1118930.0667  DIHED      =      4826.8584
- 1-4 NB = **************  1-4 EEL = **************  VDWAALS    =         0.0000
- EELEC  = -35033088.0014  EGB     = -10042449.1010  RESTRAINT  =         0.0000
- CpHMD   =         6.8589
- SOLVPH =         2.5263  REPNUM  =              8  EXCHANGE#  =            200
+ NSTEP =   342000   TIME(PS) =     684.000  TEMP(K) =   296.31  PRESS =     0.0
+ Etot   =     -3958.5106  EKtot   =      5119.2432  EPtot      =     -9077.7538
+ BOND   =      1402.6340  ANGLE   =      3610.7718  DIHED      =      6798.7429
+ 1-4 NB =      1504.0091  1-4 EEL =     16403.4327  VDWAALS    =     -3350.5146
+ EELEC  =    -28516.3130  EGB     =     -6930.5166  RESTRAINT  =         0.0000
+ CpHMD   =      1018.6069
+ SOLVPH =         6.2105  REPNUM  =              8  EXCHANGE#  =             69
  ------------------------------------------------------------------------------
 | Current Timing Info
 | -------------------
-| Total steps :   1000000 | Completed :    998000 | Remaining :      2000
+| Total steps :   1000000 | Completed :    342000 | Remaining :    658000
 |
-| Average timings for last    3000 steps:
-|     Elapsed(s) =      67.98 Per Step(ms) =      22.66
-|         ns/day =       7.63   seconds/ns =   11329.22
+| Average timings for last   10000 steps:
+|     Elapsed(s) =      60.11 Per Step(ms) =       6.01
+|         ns/day =      28.75   seconds/ns =    3005.26
 |
 | Average timings for all steps:
-|     Elapsed(s) =   21529.31 Per Step(ms) =      21.57
-|         ns/day =       8.01   seconds/ns =   10786.23
+|     Elapsed(s) =    2052.94 Per Step(ms) =       6.00
+|         ns/day =      28.79   seconds/ns =    3001.37
 |
 |
-| Estimated time remaining:      43.1 seconds.
+| Estimated time remaining:       1.1 hours.
  ------------------------------------------------------------------------------

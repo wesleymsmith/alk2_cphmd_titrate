@@ -1,0 +1,16 @@
+# 10/02/19 12:01:58
+# R206H.psf
+# Loaded topologies:
+#   R206H.psf
+trajin R206H.equil.coor
+help trajin
+quit
+# 10/02/19 12:04:29
+# R206H.psf
+# Loaded topologies:
+#   R206H.psf
+trajin R206H.equil.rst7
+trajou R206H.equil.pdb
+trajout R206H.equil.pdb
+go
+quit

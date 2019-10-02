@@ -1,19 +1,24 @@
 
- NSTEP =  1000000   TIME(PS) =    2000.000  TEMP(K) =*********  PRESS =     0.0
- Etot   = **************  EKtot   = **************  EPtot      = **************
- BOND   = **************  ANGLE   =   1305215.9894  DIHED      =      8521.8350
- 1-4 NB = **************  1-4 EEL = **************  VDWAALS    =         0.0000
- EELEC  = **************  EGB     =  -2925705.8948  RESTRAINT  =         0.0000
- CpHMD   = **************
- SOLVPH =         7.2632  REPNUM  =             12  EXCHANGE#  =            200
-
-|  Final Performance Info:
-|     -----------------------------------------------------
-|     Average timings for last    3000 steps:
-|     Elapsed(s) =      59.70 Per Step(ms) =      19.90
-|         ns/day =       8.68   seconds/ns =    9949.30
+ NSTEP =   342000   TIME(PS) =     684.000  TEMP(K) =   302.47  PRESS =     0.0
+ Etot   =     -3661.1667  EKtot   =      5225.6670  EPtot      =     -8886.8337
+ BOND   =      1398.8380  ANGLE   =      3718.6048  DIHED      =      6750.2336
+ 1-4 NB =      1520.4633  1-4 EEL =     16387.4215  VDWAALS    =     -3262.5028
+ EELEC  =    -28728.1141  EGB     =     -6671.7781  RESTRAINT  =         0.0000
+ CpHMD   =      1002.1946
+ SOLVPH =         6.7368  REPNUM  =             12  EXCHANGE#  =             69
+ ------------------------------------------------------------------------------
+| Current Timing Info
+| -------------------
+| Total steps :   1000000 | Completed :    342000 | Remaining :    658000
 |
-|     Average timings for all steps:
-|     Elapsed(s) =   21566.00 Per Step(ms) =      21.57
-|         ns/day =       8.01   seconds/ns =   10783.00
-|     -----------------------------------------------------
+| Average timings for last   10000 steps:
+|     Elapsed(s) =      59.96 Per Step(ms) =       6.00
+|         ns/day =      28.82   seconds/ns =    2997.86
+|
+| Average timings for all steps:
+|     Elapsed(s) =    2052.76 Per Step(ms) =       6.00
+|         ns/day =      28.79   seconds/ns =    3001.12
+|
+|
+| Estimated time remaining:       1.1 hours.
+ ------------------------------------------------------------------------------
