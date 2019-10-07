@@ -1,0 +1,9 @@
+# 10/07/19 14:40:09
+# /home/abdoul/abdoul/FKBP12/wt-ALK2-simulation/step2_solvator.psf
+# Loaded topologies:
+#   /home/abdoul/abdoul/FKBP12/wt-ALK2-simulation/step2_solvator.psf
+trajin /home/abdoul/abdoul/FKBP12/wt-ALK2-simulation/step4-release.dcd 1 1 1
+trajout WT.alt.pdb
+gog
+go
+quit
