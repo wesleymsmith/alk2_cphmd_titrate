@@ -1,0 +1,9 @@
+starting up
+
+ Running multipmemd version of pmemd Amber18
+    Total processors =    20
+    Number of groups =    20
+
+slurmstepd: *** JOB 29700 ON node002 CANCELLED AT 2019-10-07T14:59:34 ***
+slurmstepd: *** STEP 29700.1 ON node002 CANCELLED AT 2019-10-07T14:59:34 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
