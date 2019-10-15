@@ -1,4 +1,4 @@
-single_gpu_titrate/rep01.in md input file, ph = 3.400000
+single_gpu_titrate/rep01.in md input file, ph = __SOLVPH__
 &cntrl
     imin = 0
     irest = 0
@@ -22,7 +22,7 @@ single_gpu_titrate/rep01.in md input file, ph = 3.400000
     nrespa = 1
     iphmd = 1
     gamma_ln = 1.0
-    solvph = 3.4
+    solvph = __SOLVPH__
     ntwr = 1000000
     ioutfm = 1
 /

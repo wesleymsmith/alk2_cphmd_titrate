@@ -1,0 +1,10 @@
+source oldff/leaprc.ff14SB
+source leaprc.water.tip3p
+
+prot = loadPDB WT.alt.allAtom.fixed.pdb
+
+setBox prot centers 1.0
+
+saveAmberParm prot WT.alt.allAtom.parm7 WT.alt.allAtom.rst7
+
+quit

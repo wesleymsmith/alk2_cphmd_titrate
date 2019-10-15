@@ -14,3 +14,11 @@ trajou R206H.equil.pdb
 trajout R206H.equil.pdb
 go
 quit
+# 10/15/19 13:20:51
+# /home/abdoul/abdoul/FKBP12/wt-ALK2-simulation/step2_solvator.psf
+# Loaded topologies:
+#   /home/abdoul/abdoul/FKBP12/wt-ALK2-simulation/step2_solvator.psf
+trajin /home/abdoul/abdoul/FKBP12/wt-ALK2-simulation/step4-release.dcd 1 1 1
+trajout WT.alt.allAtom.pdb
+go
+quit

@@ -1,0 +1,9 @@
+source oldff/leaprc.ff14SB
+
+set default PBRadii mbondi3
+
+prot = loadPDB WT.alt.no_cph.tleap_in.pdb
+
+saveAmberParm prot WT.alt.no_cph.parm7 WT.alt.no_cph.rst7
+
+quit
