@@ -1,24 +1,24 @@
 
- NSTEP =   786000   TIME(PS) =    9772.000  TEMP(K) =   310.85  PRESS =     0.0
- Etot   =   -368440.9504  EKtot   =     89893.1562  EPtot      =   -458334.1067
- BOND   =      1348.5947  ANGLE   =      3597.1358  DIHED      =      5527.1430
- 1-4 NB =      1588.7183  1-4 EEL =     16183.4612  VDWAALS    =     62896.7157
- EELEC  =   -549475.8752  EHBOND  =         0.0000  RESTRAINT  =         0.0000
- EKCMT  =         0.0000  VIRIAL  =         0.0000  VOLUME     =   1472129.8661
-                                                    Density    =         0.9911
+ NSTEP =   966000   TIME(PS) =   10132.000  TEMP(K) =   310.63  PRESS =     0.0
+ Etot   =   -368517.9777  EKtot   =     89829.2891  EPtot      =   -458347.2668
+ BOND   =      1355.1731  ANGLE   =      3665.7878  DIHED      =      5552.9345
+ 1-4 NB =      1561.8874  1-4 EEL =     16209.1812  VDWAALS    =     63209.0898
+ EELEC  =   -549901.3207  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EKCMT  =         0.0000  VIRIAL  =         0.0000  VOLUME     =   1474160.9877
+                                                    Density    =         0.9897
  ------------------------------------------------------------------------------
 | Current Timing Info
 | -------------------
-| Total steps :   1000000 | Completed :    786000 | Remaining :    214000
+| Total steps :   1000000 | Completed :    966000 | Remaining :     34000
 |
 | Average timings for last    5000 steps:
-|     Elapsed(s) =      68.87 Per Step(ms) =      13.77
-|         ns/day =      12.55   seconds/ns =    6886.83
+|     Elapsed(s) =      68.73 Per Step(ms) =      13.75
+|         ns/day =      12.57   seconds/ns =    6873.27
 |
 | Average timings for all steps:
-|     Elapsed(s) =   10799.71 Per Step(ms) =      13.74
-|         ns/day =      12.58   seconds/ns =    6870.05
+|     Elapsed(s) =   13275.52 Per Step(ms) =      13.74
+|         ns/day =      12.57   seconds/ns =    6871.39
 |
 |
-| Estimated time remaining:      49.0 minutes.
+| Estimated time remaining:       7.8 minutes.
  ------------------------------------------------------------------------------
