@@ -1,0 +1,27 @@
+1 ns equilibration MD
+ &cntrl
+  imin = 0, 		!No minimization
+  irest = 1, 		!Restart simulation
+  ntx = 5, 			!Read both coordinates and velocities
+  ntb = 2, 			!Constant pressure periodic boundaries
+  ntp = 1, 			!Isotropic scaling constant pressure
+  pres0=1.0, 		!1.0 bars of pressure
+  taup=2.0, 		!1.0 ps pressure relaxation time
+  barostat=2, 		!Monte Carlo barostat
+  cut = 8.0, 		!8 angstrom nonbonded cutoff
+  ntr = 0, 			!No cartesion atom restraints
+  ntc = 2, 			!SHAKE for bonds involving H atoms only
+  ntf = 2, 			!Omit bond interactions for H atoms
+  tempi = 300.0, 	!Initial temperature at 300K
+  temp0 = 300.0, 	!Reference temperature at 300K
+  ntt = 3, 			!Langevin thermostat
+  gamma_ln = 1.0, 	!Collision frequency of 1 ps^-1
+  nstlim = 100000, 	!Run for 1E5 frames (.2 ns)
+  dt = 0.002, 		!2 fs timestep
+  ntpr = 100, 		!Write to mdout every 100 frames (.2 ps)
+  ntwx = 100, 		!Write trajectory every 100 frames (.2 ps)
+  ntwr = 1000, 		!Write restart every 1000 frames (2 ps)
+  ioutfm=1, 		!Use netcdf format for trajectory
+ &end
+ &ewald
+ &end

@@ -1,0 +1,12 @@
+starting up
+--- --- ---
+Running min.solvent for WT
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+--- --- ---
+Running heat for WT
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+--- --- ---
+Running density for WT
+Note: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+--- --- ---
+Done!

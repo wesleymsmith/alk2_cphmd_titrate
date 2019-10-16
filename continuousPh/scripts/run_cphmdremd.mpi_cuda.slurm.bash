@@ -11,6 +11,8 @@
 sysName=$1
 runNum=$2
 
+startStruc=${sysName}.rst7
+
 echo "starting up"
 
 numReps=`cat groupfile.template | wc -l`
@@ -25,7 +27,7 @@ module load cuda91/toolkit/9.1.85
 if [ "$runNum" -eq "00" ]
 then
 	cat groupfile.template | \
-		sed "s/rep[0-9][0-9].__RUN0__.rst/${sysName}.min.rst7/g" | \
+		sed "s/rep[0-9][0-9].__RUN0__.rst/${startStruc}/g" | \
 		sed "s/-phmdstrt rep[0-9][0-9].__RUN0__.phmdrst//g" | \
 		sed "s/__SYSTEM__/$sysName/g" | \
 		sed "s/__RUN1__/00/g" > groupfile.$runNum

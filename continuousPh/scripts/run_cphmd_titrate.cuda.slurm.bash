@@ -26,7 +26,7 @@ module load cuda91/toolkit/9.1.85
 export CUDA_HOME=/cm/shared/apps/cuda91/toolkit/9.1.85
 
 echo "running step 00 for $repName"
-pmemd.cuda -O  -i $repName.in -c ${sysName}.min.rst7 -p ${sysName}.parm7 -phmdin cphmd.phmdin -phmdparm cphmd.phmdparm \
+pmemd.cuda -O  -i $repName.in -c ${sysName}.rst7 -p ${sysName}.parm7 -phmdin cphmd.phmdin -phmdparm cphmd.phmdparm \
 	-phmdout $repName.00.lambda -phmdrestrt $repName.00.phmdrst -o $repName.00.mdout -r $repName.00.rst -x $repName.00.nc \
 	-inf $repName.00.mdinfo -l $repName.00.logfile
 last_step=00
