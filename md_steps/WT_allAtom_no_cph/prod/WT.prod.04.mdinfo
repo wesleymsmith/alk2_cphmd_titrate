@@ -1,24 +1,24 @@
 
- NSTEP =   621000   TIME(PS) =    9442.000  TEMP(K) =   309.90  PRESS =     0.0
- Etot   =   -369304.4342  EKtot   =     89616.0547  EPtot      =   -458920.4889
- BOND   =      1339.8135  ANGLE   =      3620.8077  DIHED      =      5568.0366
- 1-4 NB =      1591.6864  1-4 EEL =     16224.1036  VDWAALS    =     63269.5360
- EELEC  =   -550534.4727  EHBOND  =         0.0000  RESTRAINT  =         0.0000
- EKCMT  =         0.0000  VIRIAL  =         0.0000  VOLUME     =   1473420.9988
-                                                    Density    =         0.9902
+ NSTEP =   786000   TIME(PS) =    9772.000  TEMP(K) =   310.85  PRESS =     0.0
+ Etot   =   -368440.9504  EKtot   =     89893.1562  EPtot      =   -458334.1067
+ BOND   =      1348.5947  ANGLE   =      3597.1358  DIHED      =      5527.1430
+ 1-4 NB =      1588.7183  1-4 EEL =     16183.4612  VDWAALS    =     62896.7157
+ EELEC  =   -549475.8752  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EKCMT  =         0.0000  VIRIAL  =         0.0000  VOLUME     =   1472129.8661
+                                                    Density    =         0.9911
  ------------------------------------------------------------------------------
 | Current Timing Info
 | -------------------
-| Total steps :   1000000 | Completed :    621000 | Remaining :    379000
+| Total steps :   1000000 | Completed :    786000 | Remaining :    214000
 |
 | Average timings for last    5000 steps:
-|     Elapsed(s) =      68.64 Per Step(ms) =      13.73
-|         ns/day =      12.59   seconds/ns =    6864.22
+|     Elapsed(s) =      68.87 Per Step(ms) =      13.77
+|         ns/day =      12.55   seconds/ns =    6886.83
 |
 | Average timings for all steps:
-|     Elapsed(s) =    8530.59 Per Step(ms) =      13.74
-|         ns/day =      12.58   seconds/ns =    6868.43
+|     Elapsed(s) =   10799.71 Per Step(ms) =      13.74
+|         ns/day =      12.58   seconds/ns =    6870.05
 |
 |
-| Estimated time remaining:       1.4 hours.
+| Estimated time remaining:      49.0 minutes.
  ------------------------------------------------------------------------------
